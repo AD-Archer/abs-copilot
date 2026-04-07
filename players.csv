@@ -1,0 +1,57 @@
+player_id,player_name,team_name,primary_position,bats,throws
+1002,Roman Carter,Austin Aces,1B,R,R
+1003,Isaac Ramirez,Austin Aces,2B,R,R
+1004,Cole Diaz,Austin Aces,3B,R,R
+1001,Julian Gutierrez,Austin Aces,C,R,R
+1007,Aiden Bishop,Austin Aces,CF,R,L
+1009,Julian Gutierrez,Austin Aces,DH,R,R
+1006,Isaac Torres,Austin Aces,LF,R,R
+1010,Eli Cox,Austin Aces,P,R,R
+1011,Parker Soto,Austin Aces,P,L,R
+1012,Graham Walker,Austin Aces,P,R,R
+1013,Aiden Ramirez,Austin Aces,P,R,R
+1014,Adrian Gutierrez,Austin Aces,P,L,R
+1008,Julian Pena,Austin Aces,RF,R,L
+1005,Hayes Powell,Austin Aces,SS,R,R
+1016,Julian Phillips,Charlotte Comets,1B,L,R
+1017,Quinn Pena,Charlotte Comets,2B,S,R
+1018,Hayes Coleman,Charlotte Comets,3B,R,R
+1015,Felix Fisher,Charlotte Comets,C,R,R
+1021,Noah Abbott,Charlotte Comets,CF,R,R
+1023,Felix Bailey,Charlotte Comets,DH,R,R
+1020,Jordan Abbott,Charlotte Comets,LF,L,R
+1024,Isaac Cooper,Charlotte Comets,P,L,R
+1025,Wyatt Barnes,Charlotte Comets,P,R,R
+1026,Trevor Powell,Charlotte Comets,P,L,R
+1027,Noah Coleman,Charlotte Comets,P,L,R
+1028,Julian Bryant,Charlotte Comets,P,L,R
+1022,Parker Wells,Charlotte Comets,RF,L,R
+1019,Nolan Sanders,Charlotte Comets,SS,L,R
+1030,Dylan Barnett,Des Moines Dragons,1B,R,L
+1031,Isaac Cox,Des Moines Dragons,2B,L,R
+1032,Blake Ramirez,Des Moines Dragons,3B,R,R
+1029,Rhett Carter,Des Moines Dragons,C,R,R
+1035,Wyatt Barrett,Des Moines Dragons,CF,R,R
+1037,Jace Abbott,Des Moines Dragons,DH,R,R
+1034,Marco Garcia,Des Moines Dragons,LF,R,R
+1038,Felix Griffin,Des Moines Dragons,P,R,R
+1039,Reid Fisher,Des Moines Dragons,P,R,R
+1040,Emmett Watson,Des Moines Dragons,P,R,R
+1041,Aiden Rivera,Des Moines Dragons,P,R,R
+1042,Adrian James,Des Moines Dragons,P,R,R
+1036,Sawyer Bishop,Des Moines Dragons,RF,R,R
+1033,Jace Pena,Des Moines Dragons,SS,L,R
+1044,Carter Walker,El Paso Explorers,1B,S,R
+1045,Kai Cox,El Paso Explorers,2B,R,R
+1046,Trevor Ortiz,El Paso Explorers,3B,L,R
+1043,Nolan Garcia,El Paso Explorers,C,R,R
+1049,Theo Porter,El Paso Explorers,CF,R,R
+1051,Nolan Powell,El Paso Explorers,DH,R,R
+1048,Kai Sanders,El Paso Explorers,LF,R,L
+1052,Henry Parker,El Paso Explorers,P,R,L
+1053,Julian Powell,El Paso Explorers,P,R,L
+1054,Jordan Powell,El Paso Explorers,P,R,R
+1055,Isaac Powell,El Paso Explorers,P,R,L
+1056,Graham James,El Paso Explorers,P,R,R
+1050,Eli Diaz,El Paso Explorers,RF,L,R
+1047,Nolan Griffin,El Paso Explorers,SS,R,L

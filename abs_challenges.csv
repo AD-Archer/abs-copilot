@@ -1,0 +1,860 @@
+challenge_id,challenger_role,challenger_player_id,challenge_team_name,original_call,abs_call,challenge_result
+CH00064,batter,1008,Austin Aces,strike,ball,overturned
+CH00068,batter,1007,Austin Aces,strike,strike,confirmed
+CH00075,batter,1006,Austin Aces,strike,strike,confirmed
+CH00099,batter,1004,Austin Aces,strike,strike,confirmed
+CH00117,batter,1009,Austin Aces,strike,ball,overturned
+CH00123,batter,1006,Austin Aces,strike,strike,confirmed
+CH00124,batter,1003,Austin Aces,strike,ball,overturned
+CH00134,batter,1002,Austin Aces,strike,strike,confirmed
+CH00154,batter,1023,Charlotte Comets,strike,ball,overturned
+CH00194,batter,1018,Charlotte Comets,strike,ball,overturned
+CH00636,pitcher,1027,Charlotte Comets,ball,strike,overturned
+CH00640,pitcher,1024,Charlotte Comets,ball,strike,overturned
+CH00331,batter,1032,Des Moines Dragons,strike,ball,overturned
+CH00341,batter,1033,Des Moines Dragons,strike,strike,confirmed
+CH00347,batter,1035,Des Moines Dragons,strike,ball,overturned
+CH00572,pitcher,1011,Austin Aces,ball,strike,overturned
+CH00676,pitcher,1042,Des Moines Dragons,ball,strike,overturned
+CH00458,batter,1048,El Paso Explorers,strike,ball,overturned
+CH00573,pitcher,1014,Austin Aces,ball,ball,confirmed
+CH00761,pitcher,1054,El Paso Explorers,ball,strike,overturned
+CH00153,batter,1022,Charlotte Comets,strike,ball,overturned
+CH00692,pitcher,1038,Des Moines Dragons,ball,strike,overturned
+CH00699,pitcher,1041,Des Moines Dragons,ball,strike,overturned
+CH00704,pitcher,1042,Des Moines Dragons,ball,strike,overturned
+CH00816,catcher,1015,Charlotte Comets,ball,strike,overturned
+CH00178,batter,1023,Charlotte Comets,strike,strike,confirmed
+CH00181,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00500,batter,1043,El Paso Explorers,strike,ball,overturned
+CH00736,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00799,catcher,1015,Charlotte Comets,ball,strike,overturned
+CH00811,catcher,1015,Charlotte Comets,ball,strike,overturned
+CH00340,batter,1033,Des Moines Dragons,strike,ball,overturned
+CH00363,batter,1031,Des Moines Dragons,strike,ball,overturned
+CH00367,batter,1033,Des Moines Dragons,strike,ball,overturned
+CH00464,batter,1046,El Paso Explorers,strike,strike,confirmed
+CH00490,batter,1049,El Paso Explorers,strike,strike,confirmed
+CH00494,batter,1046,El Paso Explorers,strike,ball,overturned
+CH00686,pitcher,1042,Des Moines Dragons,ball,ball,confirmed
+CH00695,pitcher,1039,Des Moines Dragons,ball,strike,overturned
+CH00702,pitcher,1039,Des Moines Dragons,ball,ball,confirmed
+CH00820,catcher,1029,Des Moines Dragons,ball,strike,overturned
+CH00025,batter,1008,Austin Aces,strike,strike,confirmed
+CH00062,batter,1005,Austin Aces,strike,ball,overturned
+CH00199,batter,1018,Charlotte Comets,strike,strike,confirmed
+CH00580,pitcher,1014,Austin Aces,ball,strike,overturned
+CH00632,pitcher,1027,Charlotte Comets,ball,strike,overturned
+CH00011,batter,1007,Austin Aces,strike,strike,confirmed
+CH00118,batter,1008,Austin Aces,strike,ball,overturned
+CH00581,pitcher,1012,Austin Aces,ball,strike,overturned
+CH00796,catcher,1001,Austin Aces,ball,ball,confirmed
+CH00003,batter,1001,Austin Aces,strike,strike,confirmed
+CH00411,batter,1044,El Paso Explorers,strike,ball,overturned
+CH00430,batter,1049,El Paso Explorers,strike,ball,overturned
+CH00457,batter,1047,El Paso Explorers,strike,strike,confirmed
+CH00503,batter,1049,El Paso Explorers,strike,ball,overturned
+CH00575,pitcher,1013,Austin Aces,ball,ball,confirmed
+CH00746,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00183,batter,1021,Charlotte Comets,strike,ball,overturned
+CH00248,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00313,batter,1035,Des Moines Dragons,strike,strike,confirmed
+CH00401,batter,1031,Des Moines Dragons,strike,strike,confirmed
+CH00672,pitcher,1042,Des Moines Dragons,ball,ball,confirmed
+CH00703,pitcher,1042,Des Moines Dragons,ball,strike,overturned
+CH00148,batter,1016,Charlotte Comets,strike,ball,overturned
+CH00179,batter,1017,Charlotte Comets,strike,strike,confirmed
+CH00477,batter,1043,El Paso Explorers,strike,strike,confirmed
+CH00620,pitcher,1024,Charlotte Comets,ball,strike,overturned
+CH00305,batter,1029,Des Moines Dragons,strike,ball,overturned
+CH00381,batter,1033,Des Moines Dragons,strike,strike,confirmed
+CH00822,catcher,1029,Des Moines Dragons,ball,ball,confirmed
+CH00069,batter,1005,Austin Aces,strike,strike,confirmed
+CH00080,batter,1004,Austin Aces,strike,ball,overturned
+CH00223,batter,1020,Charlotte Comets,strike,strike,confirmed
+CH00637,pitcher,1028,Charlotte Comets,ball,strike,overturned
+CH00644,pitcher,1025,Charlotte Comets,ball,ball,confirmed
+CH00019,batter,1002,Austin Aces,strike,ball,overturned
+CH00053,batter,1006,Austin Aces,strike,strike,confirmed
+CH00320,batter,1032,Des Moines Dragons,strike,strike,confirmed
+CH00555,pitcher,1012,Austin Aces,ball,ball,confirmed
+CH00696,pitcher,1040,Des Moines Dragons,ball,ball,confirmed
+CH00402,batter,1049,El Paso Explorers,strike,ball,overturned
+CH00749,pitcher,1052,El Paso Explorers,ball,strike,overturned
+CH00756,pitcher,1052,El Paso Explorers,ball,ball,confirmed
+CH00241,batter,1022,Charlotte Comets,strike,strike,confirmed
+CH00250,batter,1016,Charlotte Comets,strike,strike,confirmed
+CH00379,batter,1029,Des Moines Dragons,strike,ball,overturned
+CH00400,batter,1031,Des Moines Dragons,strike,strike,confirmed
+CH00615,pitcher,1025,Charlotte Comets,ball,strike,overturned
+CH00685,pitcher,1039,Des Moines Dragons,ball,ball,confirmed
+CH00690,pitcher,1039,Des Moines Dragons,ball,strike,overturned
+CH00447,batter,1050,El Paso Explorers,strike,ball,overturned
+CH00532,batter,1051,El Paso Explorers,strike,strike,confirmed
+CH00385,batter,1037,Des Moines Dragons,strike,strike,confirmed
+CH00394,batter,1036,Des Moines Dragons,strike,ball,overturned
+CH00397,batter,1037,Des Moines Dragons,strike,strike,confirmed
+CH00454,batter,1046,El Paso Explorers,strike,ball,overturned
+CH00523,batter,1048,El Paso Explorers,strike,ball,overturned
+CH00706,pitcher,1040,Des Moines Dragons,ball,strike,overturned
+CH00741,pitcher,1054,El Paso Explorers,ball,ball,confirmed
+CH00029,batter,1002,Austin Aces,strike,strike,confirmed
+CH00095,batter,1006,Austin Aces,strike,ball,overturned
+CH00096,batter,1002,Austin Aces,strike,ball,overturned
+CH00266,batter,1017,Charlotte Comets,strike,ball,overturned
+CH00270,batter,1016,Charlotte Comets,strike,ball,overturned
+CH00282,batter,1021,Charlotte Comets,strike,ball,overturned
+CH00539,pitcher,1010,Austin Aces,ball,ball,confirmed
+CH00623,pitcher,1024,Charlotte Comets,ball,ball,confirmed
+CH00818,catcher,1015,Charlotte Comets,ball,ball,confirmed
+CH00008,batter,1008,Austin Aces,strike,ball,overturned
+CH00111,batter,1007,Austin Aces,strike,strike,confirmed
+CH00113,batter,1005,Austin Aces,strike,strike,confirmed
+CH00291,batter,1037,Des Moines Dragons,strike,strike,confirmed
+CH00352,batter,1037,Des Moines Dragons,strike,ball,overturned
+CH00710,pitcher,1038,Des Moines Dragons,ball,strike,overturned
+CH00439,batter,1050,El Paso Explorers,strike,ball,overturned
+CH00469,batter,1050,El Paso Explorers,strike,strike,confirmed
+CH00471,batter,1044,El Paso Explorers,strike,ball,overturned
+CH00552,pitcher,1011,Austin Aces,ball,ball,confirmed
+CH00729,pitcher,1054,El Paso Explorers,ball,ball,confirmed
+CH00210,batter,1023,Charlotte Comets,strike,strike,confirmed
+CH00220,batter,1020,Charlotte Comets,strike,ball,overturned
+CH00312,batter,1030,Des Moines Dragons,strike,ball,overturned
+CH00682,pitcher,1039,Des Moines Dragons,ball,strike,overturned
+CH00821,catcher,1029,Des Moines Dragons,ball,ball,confirmed
+CH00624,pitcher,1024,Charlotte Comets,ball,ball,confirmed
+CH00654,pitcher,1024,Charlotte Comets,ball,ball,confirmed
+CH00318,batter,1034,Des Moines Dragons,strike,ball,overturned
+CH00509,batter,1047,El Paso Explorers,strike,ball,overturned
+CH00850,catcher,1043,El Paso Explorers,ball,strike,overturned
+CH00136,batter,1007,Austin Aces,strike,ball,overturned
+CH00152,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00196,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00542,pitcher,1010,Austin Aces,ball,ball,confirmed
+CH00560,pitcher,1013,Austin Aces,ball,ball,confirmed
+CH00605,pitcher,1027,Charlotte Comets,ball,ball,confirmed
+CH00780,catcher,1001,Austin Aces,ball,ball,confirmed
+CH00345,batter,1029,Des Moines Dragons,strike,ball,overturned
+CH00795,catcher,1001,Austin Aces,ball,strike,overturned
+CH00826,catcher,1029,Des Moines Dragons,ball,ball,confirmed
+CH00002,batter,1001,Austin Aces,strike,strike,confirmed
+CH00057,batter,1004,Austin Aces,strike,strike,confirmed
+CH00169,batter,1022,Charlotte Comets,strike,ball,overturned
+CH00224,batter,1017,Charlotte Comets,strike,strike,confirmed
+CH00277,batter,1018,Charlotte Comets,strike,strike,confirmed
+CH00279,batter,1019,Charlotte Comets,strike,strike,confirmed
+CH00283,batter,1022,Charlotte Comets,strike,strike,confirmed
+CH00328,batter,1032,Des Moines Dragons,strike,ball,overturned
+CH00658,pitcher,1042,Des Moines Dragons,ball,ball,confirmed
+CH00667,pitcher,1042,Des Moines Dragons,ball,strike,overturned
+CH00669,pitcher,1039,Des Moines Dragons,ball,strike,overturned
+CH00705,pitcher,1042,Des Moines Dragons,ball,ball,confirmed
+CH00824,catcher,1029,Des Moines Dragons,ball,strike,overturned
+CH00434,batter,1043,El Paso Explorers,strike,strike,confirmed
+CH00357,batter,1031,Des Moines Dragons,strike,strike,confirmed
+CH00360,batter,1036,Des Moines Dragons,strike,ball,overturned
+CH00428,batter,1044,El Paso Explorers,strike,ball,overturned
+CH00743,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00017,batter,1009,Austin Aces,strike,strike,confirmed
+CH00046,batter,1005,Austin Aces,strike,ball,overturned
+CH00129,batter,1003,Austin Aces,strike,ball,overturned
+CH00227,batter,1022,Charlotte Comets,strike,strike,confirmed
+CH00264,batter,1019,Charlotte Comets,strike,strike,confirmed
+CH00561,pitcher,1013,Austin Aces,ball,ball,confirmed
+CH00594,pitcher,1012,Austin Aces,ball,ball,confirmed
+CH00688,pitcher,1039,Des Moines Dragons,ball,ball,confirmed
+CH00058,batter,1001,Austin Aces,strike,ball,overturned
+CH00417,batter,1049,El Paso Explorers,strike,strike,confirmed
+CH00418,batter,1049,El Paso Explorers,strike,strike,confirmed
+CH00190,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00243,batter,1023,Charlotte Comets,strike,ball,overturned
+CH00711,pitcher,1041,Des Moines Dragons,ball,ball,confirmed
+CH00802,catcher,1015,Charlotte Comets,ball,strike,overturned
+CH00806,catcher,1015,Charlotte Comets,ball,strike,overturned
+CH00168,batter,1020,Charlotte Comets,strike,strike,confirmed
+CH00478,batter,1051,El Paso Explorers,strike,ball,overturned
+CH00493,batter,1049,El Paso Explorers,strike,strike,confirmed
+CH00498,batter,1047,El Paso Explorers,strike,ball,overturned
+CH00526,batter,1051,El Paso Explorers,strike,ball,overturned
+CH00301,batter,1037,Des Moines Dragons,strike,ball,overturned
+CH00405,batter,1046,El Paso Explorers,strike,ball,overturned
+CH00423,batter,1045,El Paso Explorers,strike,ball,overturned
+CH00512,batter,1044,El Paso Explorers,strike,ball,overturned
+CH00051,batter,1003,Austin Aces,strike,strike,confirmed
+CH00090,batter,1008,Austin Aces,strike,strike,confirmed
+CH00218,batter,1017,Charlotte Comets,strike,ball,overturned
+CH00641,pitcher,1024,Charlotte Comets,ball,strike,overturned
+CH00805,catcher,1015,Charlotte Comets,ball,strike,overturned
+CH00004,batter,1004,Austin Aces,strike,strike,confirmed
+CH00311,batter,1031,Des Moines Dragons,strike,strike,confirmed
+CH00666,pitcher,1039,Des Moines Dragons,ball,strike,overturned
+CH00679,pitcher,1041,Des Moines Dragons,ball,strike,overturned
+CH00691,pitcher,1041,Des Moines Dragons,ball,ball,confirmed
+CH00028,batter,1009,Austin Aces,strike,strike,confirmed
+CH00045,batter,1005,Austin Aces,strike,strike,confirmed
+CH00845,catcher,1043,El Paso Explorers,ball,ball,confirmed
+CH00143,batter,1017,Charlotte Comets,strike,ball,overturned
+CH00244,batter,1023,Charlotte Comets,strike,strike,confirmed
+CH00255,batter,1015,Charlotte Comets,strike,strike,confirmed
+CH00257,batter,1020,Charlotte Comets,strike,strike,confirmed
+CH00333,batter,1029,Des Moines Dragons,strike,strike,confirmed
+CH00374,batter,1034,Des Moines Dragons,strike,ball,overturned
+CH00263,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00442,batter,1048,El Paso Explorers,strike,ball,overturned
+CH00501,batter,1047,El Paso Explorers,strike,strike,confirmed
+CH00721,pitcher,1052,El Paso Explorers,ball,ball,confirmed
+CH00465,batter,1047,El Paso Explorers,strike,ball,overturned
+CH00687,pitcher,1039,Des Moines Dragons,ball,ball,confirmed
+CH00764,pitcher,1054,El Paso Explorers,ball,strike,overturned
+CH00027,batter,1002,Austin Aces,strike,ball,overturned
+CH00094,batter,1001,Austin Aces,strike,strike,confirmed
+CH00105,batter,1006,Austin Aces,strike,ball,overturned
+CH00128,batter,1003,Austin Aces,strike,ball,overturned
+CH00141,batter,1009,Austin Aces,strike,strike,confirmed
+CH00144,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00149,batter,1015,Charlotte Comets,strike,strike,confirmed
+CH00206,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00246,batter,1017,Charlotte Comets,strike,strike,confirmed
+CH00261,batter,1020,Charlotte Comets,strike,strike,confirmed
+CH00565,pitcher,1011,Austin Aces,ball,strike,overturned
+CH00579,pitcher,1011,Austin Aces,ball,strike,overturned
+CH00582,pitcher,1011,Austin Aces,ball,ball,confirmed
+CH00656,pitcher,1027,Charlotte Comets,ball,strike,overturned
+CH00138,batter,1005,Austin Aces,strike,ball,overturned
+CH00662,pitcher,1039,Des Moines Dragons,ball,ball,confirmed
+CH00035,batter,1003,Austin Aces,strike,strike,confirmed
+CH00077,batter,1008,Austin Aces,strike,ball,overturned
+CH00416,batter,1050,El Paso Explorers,strike,ball,overturned
+CH00420,batter,1047,El Paso Explorers,strike,ball,overturned
+CH00857,catcher,1043,El Paso Explorers,ball,ball,confirmed
+CH00185,batter,1018,Charlotte Comets,strike,ball,overturned
+CH00238,batter,1016,Charlotte Comets,strike,strike,confirmed
+CH00184,batter,1020,Charlotte Comets,strike,ball,overturned
+CH00258,batter,1017,Charlotte Comets,strike,strike,confirmed
+CH00538,batter,1043,El Paso Explorers,strike,strike,confirmed
+CH00798,catcher,1015,Charlotte Comets,ball,strike,overturned
+CH00840,catcher,1043,El Paso Explorers,ball,ball,confirmed
+CH00391,batter,1037,Des Moines Dragons,strike,ball,overturned
+CH00443,batter,1048,El Paso Explorers,strike,ball,overturned
+CH00660,pitcher,1042,Des Moines Dragons,ball,ball,confirmed
+CH00664,pitcher,1039,Des Moines Dragons,ball,ball,confirmed
+CH00665,pitcher,1039,Des Moines Dragons,ball,ball,confirmed
+CH00698,pitcher,1038,Des Moines Dragons,ball,strike,overturned
+CH00130,batter,1009,Austin Aces,strike,strike,confirmed
+CH00155,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00195,batter,1021,Charlotte Comets,strike,ball,overturned
+CH00237,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00269,batter,1015,Charlotte Comets,strike,strike,confirmed
+CH00544,pitcher,1012,Austin Aces,ball,strike,overturned
+CH00548,pitcher,1012,Austin Aces,ball,ball,confirmed
+CH00032,batter,1002,Austin Aces,strike,strike,confirmed
+CH00121,batter,1003,Austin Aces,strike,ball,overturned
+CH00139,batter,1001,Austin Aces,strike,strike,confirmed
+CH00329,batter,1032,Des Moines Dragons,strike,strike,confirmed
+CH00819,catcher,1029,Des Moines Dragons,ball,ball,confirmed
+CH00577,pitcher,1012,Austin Aces,ball,strike,overturned
+CH00735,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00191,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00203,batter,1020,Charlotte Comets,strike,strike,confirmed
+CH00219,batter,1017,Charlotte Comets,strike,ball,overturned
+CH00339,batter,1029,Des Moines Dragons,strike,strike,confirmed
+CH00396,batter,1033,Des Moines Dragons,strike,ball,overturned
+CH00230,batter,1019,Charlotte Comets,strike,strike,confirmed
+CH00518,batter,1045,El Paso Explorers,strike,ball,overturned
+CH00600,pitcher,1024,Charlotte Comets,ball,strike,overturned
+CH00814,catcher,1015,Charlotte Comets,ball,strike,overturned
+CH00298,batter,1035,Des Moines Dragons,strike,strike,confirmed
+CH00299,batter,1031,Des Moines Dragons,strike,strike,confirmed
+CH00321,batter,1030,Des Moines Dragons,strike,strike,confirmed
+CH00278,batter,1021,Charlotte Comets,strike,strike,confirmed
+CH00554,pitcher,1012,Austin Aces,ball,ball,confirmed
+CH00630,pitcher,1028,Charlotte Comets,ball,strike,overturned
+CH00330,batter,1031,Des Moines Dragons,strike,ball,overturned
+CH00361,batter,1036,Des Moines Dragons,strike,strike,confirmed
+CH00680,pitcher,1038,Des Moines Dragons,ball,strike,overturned
+CH00782,catcher,1001,Austin Aces,ball,strike,overturned
+CH00785,catcher,1001,Austin Aces,ball,ball,confirmed
+CH00005,batter,1007,Austin Aces,strike,ball,overturned
+CH00020,batter,1008,Austin Aces,strike,strike,confirmed
+CH00066,batter,1001,Austin Aces,strike,strike,confirmed
+CH00466,batter,1043,El Paso Explorers,strike,strike,confirmed
+CH00540,pitcher,1012,Austin Aces,ball,strike,overturned
+CH00161,batter,1015,Charlotte Comets,strike,strike,confirmed
+CH00288,batter,1036,Des Moines Dragons,strike,ball,overturned
+CH00707,pitcher,1038,Des Moines Dragons,ball,ball,confirmed
+CH00221,batter,1017,Charlotte Comets,strike,strike,confirmed
+CH00598,pitcher,1024,Charlotte Comets,ball,strike,overturned
+CH00639,pitcher,1028,Charlotte Comets,ball,ball,confirmed
+CH00365,batter,1036,Des Moines Dragons,strike,ball,overturned
+CH00528,batter,1048,El Paso Explorers,strike,ball,overturned
+CH00714,pitcher,1038,Des Moines Dragons,ball,ball,confirmed
+CH00100,batter,1007,Austin Aces,strike,ball,overturned
+CH00272,batter,1017,Charlotte Comets,strike,strike,confirmed
+CH00273,batter,1019,Charlotte Comets,strike,ball,overturned
+CH00026,batter,1002,Austin Aces,strike,strike,confirmed
+CH00043,batter,1003,Austin Aces,strike,strike,confirmed
+CH00049,batter,1007,Austin Aces,strike,strike,confirmed
+CH00125,batter,1002,Austin Aces,strike,ball,overturned
+CH00386,batter,1030,Des Moines Dragons,strike,ball,overturned
+CH00419,batter,1044,El Paso Explorers,strike,ball,overturned
+CH00463,batter,1044,El Paso Explorers,strike,strike,confirmed
+CH00535,batter,1048,El Paso Explorers,strike,ball,overturned
+CH00753,pitcher,1055,El Paso Explorers,ball,ball,confirmed
+CH00176,batter,1021,Charlotte Comets,strike,ball,overturned
+CH00222,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00239,batter,1016,Charlotte Comets,strike,ball,overturned
+CH00252,batter,1020,Charlotte Comets,strike,ball,overturned
+CH00260,batter,1019,Charlotte Comets,strike,ball,overturned
+CH00836,catcher,1029,Des Moines Dragons,ball,strike,overturned
+CH00162,batter,1020,Charlotte Comets,strike,strike,confirmed
+CH00163,batter,1022,Charlotte Comets,strike,strike,confirmed
+CH00177,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00276,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00480,batter,1044,El Paso Explorers,strike,ball,overturned
+CH00483,batter,1044,El Paso Explorers,strike,strike,confirmed
+CH00757,pitcher,1053,El Paso Explorers,ball,ball,confirmed
+CH00843,catcher,1043,El Paso Explorers,ball,strike,overturned
+CH00287,batter,1030,Des Moines Dragons,strike,ball,overturned
+CH00319,batter,1033,Des Moines Dragons,strike,strike,confirmed
+CH00327,batter,1029,Des Moines Dragons,strike,strike,confirmed
+CH00166,batter,1022,Charlotte Comets,strike,ball,overturned
+CH00284,batter,1020,Charlotte Comets,strike,strike,confirmed
+CH00612,pitcher,1026,Charlotte Comets,ball,ball,confirmed
+CH00021,batter,1008,Austin Aces,strike,ball,overturned
+CH00055,batter,1003,Austin Aces,strike,strike,confirmed
+CH00063,batter,1006,Austin Aces,strike,ball,overturned
+CH00559,pitcher,1011,Austin Aces,ball,strike,overturned
+CH00585,pitcher,1014,Austin Aces,ball,ball,confirmed
+CH00663,pitcher,1040,Des Moines Dragons,ball,ball,confirmed
+CH00681,pitcher,1042,Des Moines Dragons,ball,strike,overturned
+CH00034,batter,1002,Austin Aces,strike,strike,confirmed
+CH00040,batter,1003,Austin Aces,strike,ball,overturned
+CH00583,pitcher,1014,Austin Aces,ball,strike,overturned
+CH00738,pitcher,1052,El Paso Explorers,ball,strike,overturned
+CH00752,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00172,batter,1019,Charlotte Comets,strike,strike,confirmed
+CH00303,batter,1029,Des Moines Dragons,strike,strike,confirmed
+CH00607,pitcher,1028,Charlotte Comets,ball,ball,confirmed
+CH00431,batter,1051,El Paso Explorers,strike,strike,confirmed
+CH00511,batter,1050,El Paso Explorers,strike,ball,overturned
+CH00595,pitcher,1026,Charlotte Comets,ball,ball,confirmed
+CH00609,pitcher,1024,Charlotte Comets,ball,ball,confirmed
+CH00613,pitcher,1024,Charlotte Comets,ball,strike,overturned
+CH00638,pitcher,1027,Charlotte Comets,ball,ball,confirmed
+CH00415,batter,1047,El Paso Explorers,strike,ball,overturned
+CH00479,batter,1044,El Paso Explorers,strike,strike,confirmed
+CH00520,batter,1047,El Paso Explorers,strike,ball,overturned
+CH00775,pitcher,1054,El Paso Explorers,ball,strike,overturned
+CH00106,batter,1009,Austin Aces,strike,strike,confirmed
+CH00790,catcher,1001,Austin Aces,ball,strike,overturned
+CH00800,catcher,1015,Charlotte Comets,ball,ball,confirmed
+CH00808,catcher,1015,Charlotte Comets,ball,strike,overturned
+CH00326,batter,1031,Des Moines Dragons,strike,strike,confirmed
+CH00571,pitcher,1013,Austin Aces,ball,strike,overturned
+CH00670,pitcher,1042,Des Moines Dragons,ball,strike,overturned
+CH00833,catcher,1029,Des Moines Dragons,ball,ball,confirmed
+CH00060,batter,1009,Austin Aces,strike,ball,overturned
+CH00495,batter,1049,El Paso Explorers,strike,ball,overturned
+CH00576,pitcher,1012,Austin Aces,ball,ball,confirmed
+CH00295,batter,1037,Des Moines Dragons,strike,ball,overturned
+CH00368,batter,1034,Des Moines Dragons,strike,strike,confirmed
+CH00827,catcher,1029,Des Moines Dragons,ball,ball,confirmed
+CH00165,batter,1020,Charlotte Comets,strike,strike,confirmed
+CH00198,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00412,batter,1046,El Paso Explorers,strike,ball,overturned
+CH00462,batter,1050,El Paso Explorers,strike,strike,confirmed
+CH00537,batter,1051,El Paso Explorers,strike,strike,confirmed
+CH00717,pitcher,1055,El Paso Explorers,ball,ball,confirmed
+CH00726,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00768,pitcher,1055,El Paso Explorers,ball,ball,confirmed
+CH00336,batter,1029,Des Moines Dragons,strike,strike,confirmed
+CH00409,batter,1044,El Paso Explorers,strike,ball,overturned
+CH00438,batter,1046,El Paso Explorers,strike,ball,overturned
+CH00449,batter,1048,El Paso Explorers,strike,strike,confirmed
+CH00508,batter,1044,El Paso Explorers,strike,ball,overturned
+CH00693,pitcher,1039,Des Moines Dragons,ball,strike,overturned
+CH00694,pitcher,1040,Des Moines Dragons,ball,ball,confirmed
+CH00771,pitcher,1056,El Paso Explorers,ball,ball,confirmed
+CH00828,catcher,1029,Des Moines Dragons,ball,strike,overturned
+CH00074,batter,1007,Austin Aces,strike,ball,overturned
+CH00083,batter,1003,Austin Aces,strike,ball,overturned
+CH00541,pitcher,1010,Austin Aces,ball,strike,overturned
+CH00547,pitcher,1014,Austin Aces,ball,ball,confirmed
+CH00104,batter,1003,Austin Aces,strike,ball,overturned
+CH00545,pitcher,1011,Austin Aces,ball,ball,confirmed
+CH00119,batter,1007,Austin Aces,strike,ball,overturned
+CH00433,batter,1044,El Paso Explorers,strike,ball,overturned
+CH00450,batter,1043,El Paso Explorers,strike,strike,confirmed
+CH00568,pitcher,1010,Austin Aces,ball,strike,overturned
+CH00588,pitcher,1011,Austin Aces,ball,strike,overturned
+CH00739,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00859,catcher,1043,El Paso Explorers,ball,ball,confirmed
+CH00348,batter,1035,Des Moines Dragons,strike,strike,confirmed
+CH00353,batter,1037,Des Moines Dragons,strike,ball,overturned
+CH00369,batter,1037,Des Moines Dragons,strike,strike,confirmed
+CH00606,pitcher,1024,Charlotte Comets,ball,strike,overturned
+CH00249,batter,1020,Charlotte Comets,strike,ball,overturned
+CH00406,batter,1045,El Paso Explorers,strike,strike,confirmed
+CH00446,batter,1045,El Paso Explorers,strike,strike,confirmed
+CH00847,catcher,1043,El Paso Explorers,ball,strike,overturned
+CH00293,batter,1033,Des Moines Dragons,strike,ball,overturned
+CH00376,batter,1033,Des Moines Dragons,strike,ball,overturned
+CH00750,pitcher,1053,El Paso Explorers,ball,ball,confirmed
+CH00848,catcher,1043,El Paso Explorers,ball,strike,overturned
+CH00851,catcher,1043,El Paso Explorers,ball,strike,overturned
+CH00056,batter,1009,Austin Aces,strike,strike,confirmed
+CH00061,batter,1007,Austin Aces,strike,strike,confirmed
+CH00089,batter,1005,Austin Aces,strike,strike,confirmed
+CH00133,batter,1003,Austin Aces,strike,strike,confirmed
+CH00189,batter,1023,Charlotte Comets,strike,ball,overturned
+CH00566,pitcher,1014,Austin Aces,ball,ball,confirmed
+CH00591,pitcher,1011,Austin Aces,ball,strike,overturned
+CH00349,batter,1037,Des Moines Dragons,strike,strike,confirmed
+CH00558,pitcher,1011,Austin Aces,ball,strike,overturned
+CH00578,pitcher,1012,Austin Aces,ball,ball,confirmed
+CH00013,batter,1002,Austin Aces,strike,strike,confirmed
+CH00112,batter,1008,Austin Aces,strike,strike,confirmed
+CH00444,batter,1044,El Paso Explorers,strike,strike,confirmed
+CH00505,batter,1045,El Paso Explorers,strike,strike,confirmed
+CH00506,batter,1043,El Paso Explorers,strike,strike,confirmed
+CH00529,batter,1044,El Paso Explorers,strike,strike,confirmed
+CH00242,batter,1021,Charlotte Comets,strike,strike,confirmed
+CH00306,batter,1032,Des Moines Dragons,strike,strike,confirmed
+CH00344,batter,1036,Des Moines Dragons,strike,strike,confirmed
+CH00645,pitcher,1024,Charlotte Comets,ball,ball,confirmed
+CH00193,batter,1015,Charlotte Comets,strike,strike,confirmed
+CH00205,batter,1020,Charlotte Comets,strike,strike,confirmed
+CH00514,batter,1050,El Paso Explorers,strike,ball,overturned
+CH00524,batter,1044,El Paso Explorers,strike,ball,overturned
+CH00597,pitcher,1024,Charlotte Comets,ball,strike,overturned
+CH00608,pitcher,1027,Charlotte Comets,ball,ball,confirmed
+CH00625,pitcher,1027,Charlotte Comets,ball,ball,confirmed
+CH00718,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00844,catcher,1043,El Paso Explorers,ball,strike,overturned
+CH00536,batter,1048,El Paso Explorers,strike,ball,overturned
+CH00684,pitcher,1042,Des Moines Dragons,ball,strike,overturned
+CH00701,pitcher,1038,Des Moines Dragons,ball,strike,overturned
+CH00728,pitcher,1056,El Paso Explorers,ball,ball,confirmed
+CH00007,batter,1007,Austin Aces,strike,strike,confirmed
+CH00082,batter,1006,Austin Aces,strike,ball,overturned
+CH00232,batter,1023,Charlotte Comets,strike,strike,confirmed
+CH00797,catcher,1001,Austin Aces,ball,strike,overturned
+CH00116,batter,1002,Austin Aces,strike,strike,confirmed
+CH00366,batter,1035,Des Moines Dragons,strike,strike,confirmed
+CH00395,batter,1031,Des Moines Dragons,strike,ball,overturned
+CH00830,catcher,1029,Des Moines Dragons,ball,strike,overturned
+CH00023,batter,1002,Austin Aces,strike,ball,overturned
+CH00076,batter,1008,Austin Aces,strike,strike,confirmed
+CH00132,batter,1007,Austin Aces,strike,ball,overturned
+CH00436,batter,1047,El Paso Explorers,strike,ball,overturned
+CH00157,batter,1023,Charlotte Comets,strike,ball,overturned
+CH00174,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00211,batter,1015,Charlotte Comets,strike,strike,confirmed
+CH00229,batter,1023,Charlotte Comets,strike,ball,overturned
+CH00231,batter,1019,Charlotte Comets,strike,ball,overturned
+CH00404,batter,1050,El Paso Explorers,strike,strike,confirmed
+CH00475,batter,1044,El Paso Explorers,strike,ball,overturned
+CH00603,pitcher,1024,Charlotte Comets,ball,strike,overturned
+CH00619,pitcher,1026,Charlotte Comets,ball,ball,confirmed
+CH00315,batter,1037,Des Moines Dragons,strike,strike,confirmed
+CH00359,batter,1037,Des Moines Dragons,strike,strike,confirmed
+CH00392,batter,1037,Des Moines Dragons,strike,ball,overturned
+CH00855,catcher,1043,El Paso Explorers,ball,ball,confirmed
+CH00856,catcher,1043,El Paso Explorers,ball,ball,confirmed
+CH00091,batter,1002,Austin Aces,strike,ball,overturned
+CH00101,batter,1002,Austin Aces,strike,ball,overturned
+CH00801,catcher,1015,Charlotte Comets,ball,strike,overturned
+CH00079,batter,1002,Austin Aces,strike,ball,overturned
+CH00355,batter,1029,Des Moines Dragons,strike,strike,confirmed
+CH00370,batter,1029,Des Moines Dragons,strike,strike,confirmed
+CH00389,batter,1037,Des Moines Dragons,strike,strike,confirmed
+CH00567,pitcher,1012,Austin Aces,ball,strike,overturned
+CH00570,pitcher,1014,Austin Aces,ball,strike,overturned
+CH00033,batter,1007,Austin Aces,strike,strike,confirmed
+CH00037,batter,1007,Austin Aces,strike,strike,confirmed
+CH00078,batter,1001,Austin Aces,strike,strike,confirmed
+CH00122,batter,1001,Austin Aces,strike,ball,overturned
+CH00441,batter,1049,El Paso Explorers,strike,ball,overturned
+CH00849,catcher,1043,El Paso Explorers,ball,ball,confirmed
+CH00304,batter,1031,Des Moines Dragons,strike,ball,overturned
+CH00322,batter,1034,Des Moines Dragons,strike,strike,confirmed
+CH00325,batter,1031,Des Moines Dragons,strike,strike,confirmed
+CH00393,batter,1032,Des Moines Dragons,strike,strike,confirmed
+CH00398,batter,1035,Des Moines Dragons,strike,ball,overturned
+CH00834,catcher,1029,Des Moines Dragons,ball,ball,confirmed
+CH00253,batter,1017,Charlotte Comets,strike,ball,overturned
+CH00455,batter,1044,El Paso Explorers,strike,strike,confirmed
+CH00599,pitcher,1024,Charlotte Comets,ball,ball,confirmed
+CH00727,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00774,pitcher,1053,El Paso Explorers,ball,ball,confirmed
+CH00737,pitcher,1056,El Paso Explorers,ball,strike,overturned
+CH00835,catcher,1029,Des Moines Dragons,ball,ball,confirmed
+CH00150,batter,1017,Charlotte Comets,strike,strike,confirmed
+CH00251,batter,1018,Charlotte Comets,strike,strike,confirmed
+CH00551,pitcher,1012,Austin Aces,ball,strike,overturned
+CH00553,pitcher,1010,Austin Aces,ball,ball,confirmed
+CH00563,pitcher,1011,Austin Aces,ball,ball,confirmed
+CH00574,pitcher,1011,Austin Aces,ball,ball,confirmed
+CH00364,batter,1035,Des Moines Dragons,strike,strike,confirmed
+CH00661,pitcher,1041,Des Moines Dragons,ball,strike,overturned
+CH00016,batter,1005,Austin Aces,strike,ball,overturned
+CH00719,pitcher,1052,El Paso Explorers,ball,strike,overturned
+CH00742,pitcher,1053,El Paso Explorers,ball,ball,confirmed
+CH00760,pitcher,1054,El Paso Explorers,ball,ball,confirmed
+CH00784,catcher,1001,Austin Aces,ball,strike,overturned
+CH00225,batter,1017,Charlotte Comets,strike,ball,overturned
+CH00659,pitcher,1042,Des Moines Dragons,ball,strike,overturned
+CH00171,batter,1019,Charlotte Comets,strike,strike,confirmed
+CH00182,batter,1021,Charlotte Comets,strike,ball,overturned
+CH00235,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00426,batter,1043,El Paso Explorers,strike,ball,overturned
+CH00050,batter,1008,Austin Aces,strike,strike,confirmed
+CH00072,batter,1005,Austin Aces,strike,strike,confirmed
+CH00158,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00209,batter,1023,Charlotte Comets,strike,ball,overturned
+CH00236,batter,1018,Charlotte Comets,strike,ball,overturned
+CH00562,pitcher,1013,Austin Aces,ball,ball,confirmed
+CH00793,catcher,1001,Austin Aces,ball,ball,confirmed
+CH00300,batter,1033,Des Moines Dragons,strike,strike,confirmed
+CH00549,pitcher,1010,Austin Aces,ball,strike,overturned
+CH00481,batter,1044,El Paso Explorers,strike,strike,confirmed
+CH00527,batter,1049,El Paso Explorers,strike,strike,confirmed
+CH00234,batter,1020,Charlotte Comets,strike,ball,overturned
+CH00384,batter,1037,Des Moines Dragons,strike,ball,overturned
+CH00274,batter,1019,Charlotte Comets,strike,ball,overturned
+CH00437,batter,1043,El Paso Explorers,strike,ball,overturned
+CH00489,batter,1044,El Paso Explorers,strike,strike,confirmed
+CH00767,pitcher,1054,El Paso Explorers,ball,ball,confirmed
+CH00425,batter,1050,El Paso Explorers,strike,strike,confirmed
+CH00491,batter,1044,El Paso Explorers,strike,strike,confirmed
+CH00769,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00629,pitcher,1027,Charlotte Comets,ball,ball,confirmed
+CH00059,batter,1007,Austin Aces,strike,strike,confirmed
+CH00073,batter,1008,Austin Aces,strike,ball,overturned
+CH00108,batter,1003,Austin Aces,strike,ball,overturned
+CH00131,batter,1007,Austin Aces,strike,strike,confirmed
+CH00342,batter,1035,Des Moines Dragons,strike,ball,overturned
+CH00009,batter,1007,Austin Aces,strike,strike,confirmed
+CH00407,batter,1048,El Paso Explorers,strike,strike,confirmed
+CH00461,batter,1044,El Paso Explorers,strike,strike,confirmed
+CH00592,pitcher,1012,Austin Aces,ball,ball,confirmed
+CH00732,pitcher,1056,El Paso Explorers,ball,ball,confirmed
+CH00733,pitcher,1055,El Paso Explorers,ball,ball,confirmed
+CH00744,pitcher,1055,El Paso Explorers,ball,ball,confirmed
+CH00842,catcher,1043,El Paso Explorers,ball,ball,confirmed
+CH00846,catcher,1043,El Paso Explorers,ball,strike,overturned
+CH00852,catcher,1043,El Paso Explorers,ball,strike,overturned
+CH00146,batter,1018,Charlotte Comets,strike,strike,confirmed
+CH00233,batter,1018,Charlotte Comets,strike,ball,overturned
+CH00297,batter,1031,Des Moines Dragons,strike,ball,overturned
+CH00602,pitcher,1024,Charlotte Comets,ball,ball,confirmed
+CH00650,pitcher,1026,Charlotte Comets,ball,ball,confirmed
+CH00823,catcher,1029,Des Moines Dragons,ball,ball,confirmed
+CH00204,batter,1022,Charlotte Comets,strike,strike,confirmed
+CH00763,pitcher,1055,El Paso Explorers,ball,ball,confirmed
+CH00804,catcher,1015,Charlotte Comets,ball,ball,confirmed
+CH00292,batter,1030,Des Moines Dragons,strike,ball,overturned
+CH00356,batter,1035,Des Moines Dragons,strike,strike,confirmed
+CH00371,batter,1029,Des Moines Dragons,strike,ball,overturned
+CH00460,batter,1044,El Paso Explorers,strike,strike,confirmed
+CH00513,batter,1048,El Paso Explorers,strike,strike,confirmed
+CH00675,pitcher,1041,Des Moines Dragons,ball,strike,overturned
+CH00697,pitcher,1041,Des Moines Dragons,ball,ball,confirmed
+CH00709,pitcher,1041,Des Moines Dragons,ball,ball,confirmed
+CH00712,pitcher,1038,Des Moines Dragons,ball,strike,overturned
+CH00747,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00041,batter,1006,Austin Aces,strike,strike,confirmed
+CH00145,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00167,batter,1023,Charlotte Comets,strike,ball,overturned
+CH00271,batter,1020,Charlotte Comets,strike,strike,confirmed
+CH00813,catcher,1015,Charlotte Comets,ball,strike,overturned
+CH00039,batter,1007,Austin Aces,strike,strike,confirmed
+CH00103,batter,1003,Austin Aces,strike,strike,confirmed
+CH00346,batter,1031,Des Moines Dragons,strike,ball,overturned
+CH00372,batter,1032,Des Moines Dragons,strike,strike,confirmed
+CH00557,pitcher,1012,Austin Aces,ball,ball,confirmed
+CH00832,catcher,1029,Des Moines Dragons,ball,ball,confirmed
+CH00440,batter,1050,El Paso Explorers,strike,strike,confirmed
+CH00470,batter,1051,El Paso Explorers,strike,strike,confirmed
+CH00492,batter,1049,El Paso Explorers,strike,ball,overturned
+CH00531,batter,1051,El Paso Explorers,strike,strike,confirmed
+CH00787,catcher,1001,Austin Aces,ball,ball,confirmed
+CH00151,batter,1022,Charlotte Comets,strike,ball,overturned
+CH00610,pitcher,1024,Charlotte Comets,ball,strike,overturned
+CH00432,batter,1045,El Paso Explorers,strike,ball,overturned
+CH00521,batter,1051,El Paso Explorers,strike,strike,confirmed
+CH00604,pitcher,1025,Charlotte Comets,ball,ball,confirmed
+CH00626,pitcher,1024,Charlotte Comets,ball,strike,overturned
+CH00627,pitcher,1024,Charlotte Comets,ball,strike,overturned
+CH00648,pitcher,1027,Charlotte Comets,ball,strike,overturned
+CH00770,pitcher,1056,El Paso Explorers,ball,strike,overturned
+CH00772,pitcher,1054,El Paso Explorers,ball,strike,overturned
+CH00453,batter,1044,El Paso Explorers,strike,strike,confirmed
+CH00472,batter,1047,El Paso Explorers,strike,strike,confirmed
+CH00482,batter,1047,El Paso Explorers,strike,strike,confirmed
+CH00486,batter,1046,El Paso Explorers,strike,strike,confirmed
+CH00674,pitcher,1040,Des Moines Dragons,ball,ball,confirmed
+CH00748,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00042,batter,1007,Austin Aces,strike,strike,confirmed
+CH00006,batter,1005,Austin Aces,strike,ball,overturned
+CH00052,batter,1003,Austin Aces,strike,ball,overturned
+CH00587,pitcher,1010,Austin Aces,ball,ball,confirmed
+CH00065,batter,1008,Austin Aces,strike,ball,overturned
+CH00067,batter,1001,Austin Aces,strike,ball,overturned
+CH00107,batter,1006,Austin Aces,strike,strike,confirmed
+CH00408,batter,1046,El Paso Explorers,strike,ball,overturned
+CH00507,batter,1045,El Paso Explorers,strike,ball,overturned
+CH00766,pitcher,1053,El Paso Explorers,ball,ball,confirmed
+CH00778,catcher,1001,Austin Aces,ball,strike,overturned
+CH00858,catcher,1043,El Paso Explorers,ball,strike,overturned
+CH00265,batter,1016,Charlotte Comets,strike,strike,confirmed
+CH00317,batter,1032,Des Moines Dragons,strike,strike,confirmed
+CH00375,batter,1035,Des Moines Dragons,strike,strike,confirmed
+CH00399,batter,1031,Des Moines Dragons,strike,strike,confirmed
+CH00642,pitcher,1024,Charlotte Comets,ball,ball,confirmed
+CH00653,pitcher,1025,Charlotte Comets,ball,ball,confirmed
+CH00160,batter,1020,Charlotte Comets,strike,strike,confirmed
+CH00170,batter,1018,Charlotte Comets,strike,strike,confirmed
+CH00207,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00497,batter,1048,El Paso Explorers,strike,strike,confirmed
+CH00614,pitcher,1024,Charlotte Comets,ball,ball,confirmed
+CH00631,pitcher,1026,Charlotte Comets,ball,ball,confirmed
+CH00302,batter,1034,Des Moines Dragons,strike,ball,overturned
+CH00525,batter,1051,El Paso Explorers,strike,ball,overturned
+CH00671,pitcher,1040,Des Moines Dragons,ball,ball,confirmed
+CH00841,catcher,1043,El Paso Explorers,ball,strike,overturned
+CH00015,batter,1002,Austin Aces,strike,strike,confirmed
+CH00018,batter,1002,Austin Aces,strike,ball,overturned
+CH00030,batter,1005,Austin Aces,strike,ball,overturned
+CH00081,batter,1003,Austin Aces,strike,strike,confirmed
+CH00200,batter,1021,Charlotte Comets,strike,strike,confirmed
+CH00593,pitcher,1012,Austin Aces,ball,ball,confirmed
+CH00817,catcher,1015,Charlotte Comets,ball,ball,confirmed
+CH00044,batter,1003,Austin Aces,strike,strike,confirmed
+CH00097,batter,1001,Austin Aces,strike,ball,overturned
+CH00109,batter,1002,Austin Aces,strike,ball,overturned
+CH00354,batter,1033,Des Moines Dragons,strike,strike,confirmed
+CH00683,pitcher,1038,Des Moines Dragons,ball,strike,overturned
+CH00716,pitcher,1041,Des Moines Dragons,ball,ball,confirmed
+CH00071,batter,1003,Austin Aces,strike,strike,confirmed
+CH00186,batter,1020,Charlotte Comets,strike,ball,overturned
+CH00668,pitcher,1041,Des Moines Dragons,ball,strike,overturned
+CH00156,batter,1020,Charlotte Comets,strike,strike,confirmed
+CH00192,batter,1016,Charlotte Comets,strike,ball,overturned
+CH00215,batter,1023,Charlotte Comets,strike,strike,confirmed
+CH00422,batter,1051,El Paso Explorers,strike,strike,confirmed
+CH00448,batter,1051,El Paso Explorers,strike,strike,confirmed
+CH00488,batter,1050,El Paso Explorers,strike,strike,confirmed
+CH00601,pitcher,1027,Charlotte Comets,ball,strike,overturned
+CH00723,pitcher,1053,El Paso Explorers,ball,ball,confirmed
+CH00810,catcher,1015,Charlotte Comets,ball,ball,confirmed
+CH00296,batter,1031,Des Moines Dragons,strike,strike,confirmed
+CH00358,batter,1034,Des Moines Dragons,strike,ball,overturned
+CH00424,batter,1048,El Paso Explorers,strike,ball,overturned
+CH00445,batter,1044,El Paso Explorers,strike,strike,confirmed
+CH00467,batter,1049,El Paso Explorers,strike,ball,overturned
+CH00689,pitcher,1041,Des Moines Dragons,ball,strike,overturned
+CH00773,pitcher,1056,El Paso Explorers,ball,ball,confirmed
+CH00825,catcher,1029,Des Moines Dragons,ball,strike,overturned
+CH00012,batter,1003,Austin Aces,strike,strike,confirmed
+CH00159,batter,1018,Charlotte Comets,strike,ball,overturned
+CH00621,pitcher,1028,Charlotte Comets,ball,strike,overturned
+CH00791,catcher,1001,Austin Aces,ball,strike,overturned
+CH00323,batter,1035,Des Moines Dragons,strike,ball,overturned
+CH00473,batter,1044,El Paso Explorers,strike,ball,overturned
+CH00502,batter,1048,El Paso Explorers,strike,strike,confirmed
+CH00720,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00758,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00338,batter,1037,Des Moines Dragons,strike,ball,overturned
+CH00596,pitcher,1026,Charlotte Comets,ball,ball,confirmed
+CH00175,batter,1021,Charlotte Comets,strike,strike,confirmed
+CH00214,batter,1023,Charlotte Comets,strike,strike,confirmed
+CH00217,batter,1022,Charlotte Comets,strike,strike,confirmed
+CH00262,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00731,pitcher,1056,El Paso Explorers,ball,ball,confirmed
+CH00413,batter,1044,El Paso Explorers,strike,strike,confirmed
+CH00530,batter,1043,El Paso Explorers,strike,strike,confirmed
+CH00751,pitcher,1052,El Paso Explorers,ball,ball,confirmed
+CH00776,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00137,batter,1007,Austin Aces,strike,strike,confirmed
+CH00202,batter,1017,Charlotte Comets,strike,strike,confirmed
+CH00646,pitcher,1026,Charlotte Comets,ball,ball,confirmed
+CH00655,pitcher,1025,Charlotte Comets,ball,ball,confirmed
+CH00084,batter,1008,Austin Aces,strike,strike,confirmed
+CH00351,batter,1035,Des Moines Dragons,strike,strike,confirmed
+CH00678,pitcher,1038,Des Moines Dragons,ball,strike,overturned
+CH00086,batter,1003,Austin Aces,strike,strike,confirmed
+CH00459,batter,1049,El Paso Explorers,strike,ball,overturned
+CH00487,batter,1050,El Paso Explorers,strike,strike,confirmed
+CH00724,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00197,batter,1017,Charlotte Comets,strike,strike,confirmed
+CH00618,pitcher,1026,Charlotte Comets,ball,strike,overturned
+CH00633,pitcher,1024,Charlotte Comets,ball,ball,confirmed
+CH00831,catcher,1029,Des Moines Dragons,ball,ball,confirmed
+CH00208,batter,1015,Charlotte Comets,strike,strike,confirmed
+CH00212,batter,1016,Charlotte Comets,strike,ball,overturned
+CH00247,batter,1020,Charlotte Comets,strike,ball,overturned
+CH00474,batter,1051,El Paso Explorers,strike,strike,confirmed
+CH00533,batter,1048,El Paso Explorers,strike,ball,overturned
+CH00617,pitcher,1025,Charlotte Comets,ball,strike,overturned
+CH00647,pitcher,1027,Charlotte Comets,ball,strike,overturned
+CH00754,pitcher,1053,El Paso Explorers,ball,ball,confirmed
+CH00809,catcher,1015,Charlotte Comets,ball,ball,confirmed
+CH00854,catcher,1043,El Paso Explorers,ball,strike,overturned
+CH00289,batter,1036,Des Moines Dragons,strike,strike,confirmed
+CH00309,batter,1035,Des Moines Dragons,strike,strike,confirmed
+CH00316,batter,1035,Des Moines Dragons,strike,strike,confirmed
+CH00380,batter,1037,Des Moines Dragons,strike,ball,overturned
+CH00388,batter,1036,Des Moines Dragons,strike,strike,confirmed
+CH00403,batter,1049,El Paso Explorers,strike,ball,overturned
+CH00427,batter,1045,El Paso Explorers,strike,strike,confirmed
+CH00476,batter,1049,El Paso Explorers,strike,strike,confirmed
+CH00485,batter,1044,El Paso Explorers,strike,ball,overturned
+CH00722,pitcher,1056,El Paso Explorers,ball,strike,overturned
+CH00725,pitcher,1054,El Paso Explorers,ball,strike,overturned
+CH00010,batter,1003,Austin Aces,strike,strike,confirmed
+CH00268,batter,1022,Charlotte Comets,strike,ball,overturned
+CH00590,pitcher,1011,Austin Aces,ball,strike,overturned
+CH00794,catcher,1001,Austin Aces,ball,ball,confirmed
+CH00036,batter,1008,Austin Aces,strike,ball,overturned
+CH00373,batter,1030,Des Moines Dragons,strike,ball,overturned
+CH00378,batter,1030,Des Moines Dragons,strike,strike,confirmed
+CH00564,pitcher,1013,Austin Aces,ball,strike,overturned
+CH00781,catcher,1001,Austin Aces,ball,strike,overturned
+CH00504,batter,1047,El Paso Explorers,strike,strike,confirmed
+CH00546,pitcher,1014,Austin Aces,ball,strike,overturned
+CH00589,pitcher,1010,Austin Aces,ball,strike,overturned
+CH00786,catcher,1001,Austin Aces,ball,strike,overturned
+CH00180,batter,1022,Charlotte Comets,strike,strike,confirmed
+CH00254,batter,1017,Charlotte Comets,strike,strike,confirmed
+CH00350,batter,1030,Des Moines Dragons,strike,ball,overturned
+CH00377,batter,1037,Des Moines Dragons,strike,ball,overturned
+CH00173,batter,1023,Charlotte Comets,strike,ball,overturned
+CH00226,batter,1022,Charlotte Comets,strike,strike,confirmed
+CH00245,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00414,batter,1048,El Paso Explorers,strike,strike,confirmed
+CH00611,pitcher,1024,Charlotte Comets,ball,strike,overturned
+CH00634,pitcher,1024,Charlotte Comets,ball,strike,overturned
+CH00651,pitcher,1024,Charlotte Comets,ball,ball,confirmed
+CH00657,pitcher,1028,Charlotte Comets,ball,ball,confirmed
+CH00755,pitcher,1055,El Paso Explorers,ball,strike,overturned
+CH00812,catcher,1015,Charlotte Comets,ball,strike,overturned
+CH00286,batter,1032,Des Moines Dragons,strike,ball,overturned
+CH00410,batter,1048,El Paso Explorers,strike,strike,confirmed
+CH00484,batter,1045,El Paso Explorers,strike,ball,overturned
+CH00516,batter,1044,El Paso Explorers,strike,strike,confirmed
+CH00745,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00765,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00213,batter,1015,Charlotte Comets,strike,strike,confirmed
+CH00280,batter,1019,Charlotte Comets,strike,strike,confirmed
+CH00285,batter,1019,Charlotte Comets,strike,ball,overturned
+CH00550,pitcher,1013,Austin Aces,ball,ball,confirmed
+CH00569,pitcher,1011,Austin Aces,ball,strike,overturned
+CH00628,pitcher,1028,Charlotte Comets,ball,strike,overturned
+CH00085,batter,1004,Austin Aces,strike,ball,overturned
+CH00127,batter,1006,Austin Aces,strike,ball,overturned
+CH00294,batter,1030,Des Moines Dragons,strike,strike,confirmed
+CH00310,batter,1031,Des Moines Dragons,strike,strike,confirmed
+CH00383,batter,1035,Des Moines Dragons,strike,strike,confirmed
+CH00387,batter,1030,Des Moines Dragons,strike,ball,overturned
+CH00792,catcher,1001,Austin Aces,ball,ball,confirmed
+CH00024,batter,1007,Austin Aces,strike,strike,confirmed
+CH00054,batter,1006,Austin Aces,strike,strike,confirmed
+CH00088,batter,1007,Austin Aces,strike,strike,confirmed
+CH00734,pitcher,1053,El Paso Explorers,ball,strike,overturned
+CH00783,catcher,1001,Austin Aces,ball,strike,overturned
+CH00142,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00164,batter,1015,Charlotte Comets,strike,strike,confirmed
+CH00281,batter,1016,Charlotte Comets,strike,ball,overturned
+CH00314,batter,1037,Des Moines Dragons,strike,strike,confirmed
+CH00382,batter,1032,Des Moines Dragons,strike,strike,confirmed
+CH00622,pitcher,1024,Charlotte Comets,ball,ball,confirmed
+CH00275,batter,1023,Charlotte Comets,strike,strike,confirmed
+CH00429,batter,1051,El Paso Explorers,strike,strike,confirmed
+CH00815,catcher,1015,Charlotte Comets,ball,ball,confirmed
+CH00290,batter,1031,Des Moines Dragons,strike,ball,overturned
+CH00362,batter,1037,Des Moines Dragons,strike,strike,confirmed
+CH00456,batter,1045,El Paso Explorers,strike,strike,confirmed
+CH00534,batter,1050,El Paso Explorers,strike,ball,overturned
+CH00715,pitcher,1041,Des Moines Dragons,ball,ball,confirmed
+CH00730,pitcher,1054,El Paso Explorers,ball,ball,confirmed
+CH00740,pitcher,1055,El Paso Explorers,ball,strike,overturned
+CH00120,batter,1006,Austin Aces,strike,ball,overturned
+CH00649,pitcher,1027,Charlotte Comets,ball,strike,overturned
+CH00788,catcher,1001,Austin Aces,ball,strike,overturned
+CH00001,batter,1002,Austin Aces,strike,ball,overturned
+CH00115,batter,1003,Austin Aces,strike,ball,overturned
+CH00543,pitcher,1010,Austin Aces,ball,strike,overturned
+CH00789,catcher,1001,Austin Aces,ball,ball,confirmed
+CH00829,catcher,1029,Des Moines Dragons,ball,ball,confirmed
+CH00047,batter,1002,Austin Aces,strike,ball,overturned
+CH00451,batter,1044,El Paso Explorers,strike,strike,confirmed
+CH00468,batter,1044,El Paso Explorers,strike,ball,overturned
+CH00147,batter,1021,Charlotte Comets,strike,strike,confirmed
+CH00188,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00334,batter,1034,Des Moines Dragons,strike,strike,confirmed
+CH00390,batter,1030,Des Moines Dragons,strike,ball,overturned
+CH00713,pitcher,1042,Des Moines Dragons,ball,ball,confirmed
+CH00228,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00807,catcher,1015,Charlotte Comets,ball,strike,overturned
+CH00435,batter,1051,El Paso Explorers,strike,strike,confirmed
+CH00838,catcher,1043,El Paso Explorers,ball,strike,overturned
+CH00070,batter,1007,Austin Aces,strike,strike,confirmed
+CH00584,pitcher,1011,Austin Aces,ball,ball,confirmed
+CH00616,pitcher,1024,Charlotte Comets,ball,strike,overturned
+CH00635,pitcher,1025,Charlotte Comets,ball,ball,confirmed
+CH00652,pitcher,1024,Charlotte Comets,ball,strike,overturned
+CH00114,batter,1004,Austin Aces,strike,ball,overturned
+CH00332,batter,1034,Des Moines Dragons,strike,strike,confirmed
+CH00014,batter,1001,Austin Aces,strike,ball,overturned
+CH00048,batter,1004,Austin Aces,strike,strike,confirmed
+CH00126,batter,1006,Austin Aces,strike,strike,confirmed
+CH00556,pitcher,1010,Austin Aces,ball,strike,overturned
+CH00240,batter,1018,Charlotte Comets,strike,strike,confirmed
+CH00677,pitcher,1038,Des Moines Dragons,ball,ball,confirmed
+CH00708,pitcher,1038,Des Moines Dragons,ball,ball,confirmed
+CH00496,batter,1046,El Paso Explorers,strike,ball,overturned
+CH00515,batter,1046,El Paso Explorers,strike,ball,overturned
+CH00517,batter,1044,El Paso Explorers,strike,ball,overturned
+CH00522,batter,1045,El Paso Explorers,strike,strike,confirmed
+CH00759,pitcher,1055,El Paso Explorers,ball,strike,overturned
+CH00803,catcher,1015,Charlotte Comets,ball,ball,confirmed
+CH00839,catcher,1043,El Paso Explorers,ball,ball,confirmed
+CH00308,batter,1031,Des Moines Dragons,strike,strike,confirmed
+CH00324,batter,1029,Des Moines Dragons,strike,strike,confirmed
+CH00335,batter,1031,Des Moines Dragons,strike,strike,confirmed
+CH00499,batter,1049,El Paso Explorers,strike,strike,confirmed
+CH00510,batter,1047,El Paso Explorers,strike,ball,overturned
+CH00762,pitcher,1053,El Paso Explorers,ball,ball,confirmed
+CH00038,batter,1006,Austin Aces,strike,strike,confirmed
+CH00092,batter,1007,Austin Aces,strike,strike,confirmed
+CH00098,batter,1006,Austin Aces,strike,strike,confirmed
+CH00187,batter,1015,Charlotte Comets,strike,ball,overturned
+CH00201,batter,1019,Charlotte Comets,strike,ball,overturned
+CH00777,catcher,1001,Austin Aces,ball,ball,confirmed
+CH00779,catcher,1001,Austin Aces,ball,strike,overturned
+CH00031,batter,1009,Austin Aces,strike,strike,confirmed
+CH00087,batter,1001,Austin Aces,strike,ball,overturned
+CH00093,batter,1002,Austin Aces,strike,ball,overturned
+CH00102,batter,1007,Austin Aces,strike,strike,confirmed
+CH00135,batter,1003,Austin Aces,strike,ball,overturned
+CH00140,batter,1004,Austin Aces,strike,ball,overturned
+CH00586,pitcher,1011,Austin Aces,ball,ball,confirmed
+CH00700,pitcher,1042,Des Moines Dragons,ball,strike,overturned
+CH00022,batter,1005,Austin Aces,strike,ball,overturned
+CH00110,batter,1005,Austin Aces,strike,ball,overturned
+CH00421,batter,1045,El Paso Explorers,strike,ball,overturned
+CH00216,batter,1016,Charlotte Comets,strike,strike,confirmed
+CH00337,batter,1033,Des Moines Dragons,strike,strike,confirmed
+CH00343,batter,1030,Des Moines Dragons,strike,ball,overturned
+CH00643,pitcher,1025,Charlotte Comets,ball,ball,confirmed
+CH00256,batter,1017,Charlotte Comets,strike,strike,confirmed
+CH00259,batter,1015,Charlotte Comets,strike,strike,confirmed
+CH00267,batter,1019,Charlotte Comets,strike,ball,overturned
+CH00519,batter,1046,El Paso Explorers,strike,ball,overturned
+CH00307,batter,1037,Des Moines Dragons,strike,strike,confirmed
+CH00452,batter,1051,El Paso Explorers,strike,strike,confirmed
+CH00673,pitcher,1039,Des Moines Dragons,ball,ball,confirmed
+CH00837,catcher,1029,Des Moines Dragons,ball,strike,overturned
+CH00853,catcher,1043,El Paso Explorers,ball,strike,overturned
