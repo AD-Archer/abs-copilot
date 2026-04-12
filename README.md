@@ -19,6 +19,7 @@ MCP-first analytics assistant for ABS challenge coaching workflows.
   - Player Lens
   - Ask ABS Copilot
 - Weekly report endpoint that writes Markdown + HTML artifacts
+  - Includes executive summary, KPI snapshot, tactical opportunity tables, risk flags, and next-week action plan
 
 ## Data Scope
 - `abs_challenges.csv`: one row per ABS challenge

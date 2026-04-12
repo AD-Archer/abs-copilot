@@ -63,8 +63,9 @@ def _create_table_from_csv(
     conn.execute(f'CREATE TABLE "{table_name}" ({", ".join(typed_defs)})')
 
     placeholders = ", ".join(["?"] * len(headers))
+    quoted_columns = ", ".join(f'"{h}"' for h in headers)
     conn.executemany(
-        f'INSERT INTO "{table_name}" ({", ".join([f"""\"{h}\"""" for h in headers])}) VALUES ({placeholders})',
+        f'INSERT INTO "{table_name}" ({quoted_columns}) VALUES ({placeholders})',
         rows,
     )
 

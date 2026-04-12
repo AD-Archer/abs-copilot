@@ -21,6 +21,7 @@ TOOLS: dict[str, ToolFn] = {
     "abs_challenge_usage": analytics.challenge_usage,
     "abs_miss_location_analysis": analytics.miss_location_analysis,
     "abs_officiating_quality_proxy": analytics.officiating_quality_proxy,
+    "abs_dataset_overview": analytics.dataset_overview,
 }
 
 
@@ -35,6 +36,7 @@ def list_tools() -> list[dict[str, Any]]:
         {"name": "abs_challenge_usage", "description": "Challenge usage and participation per game."},
         {"name": "abs_miss_location_analysis", "description": "Challenge results by high/low and horizontal location buckets."},
         {"name": "abs_officiating_quality_proxy", "description": "Game-level called-vs-ABS disagreement proxy."},
+        {"name": "abs_dataset_overview", "description": "High-level overview of current ABS dataset coverage."},
     ]
 
 
@@ -61,4 +63,6 @@ def call_tool(name: str, arguments: dict[str, Any]) -> analytics.ToolResult:
         return tool(arguments.get("filters", {}))
     if name == "abs_officiating_quality_proxy":
         return tool(arguments.get("filters", {}))
+    if name == "abs_dataset_overview":
+        return tool()
     raise ValueError(f"Unhandled tool call: {name}")

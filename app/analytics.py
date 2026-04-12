@@ -423,3 +423,30 @@ def officiating_quality_proxy(filters: dict[str, Any] | None = None) -> ToolResu
         data=rows,
         recommended_actions=actions,
     )
+
+
+def dataset_overview() -> ToolResult:
+    conn = get_connection()
+    try:
+        counts = fetch_all_dicts(
+            conn,
+            """
+            SELECT
+                (SELECT COUNT(*) FROM abs_challenges) AS challenges,
+                (SELECT COUNT(*) FROM pitches) AS pitches,
+                (SELECT COUNT(*) FROM players) AS players,
+                (SELECT COUNT(DISTINCT game_id) FROM pitches) AS games
+            """,
+        )[0]
+        teams = fetch_all_dicts(conn, "SELECT DISTINCT team_name FROM v_team_kpis ORDER BY team_name")
+    finally:
+        conn.close()
+    team_names = [t["team_name"] for t in teams]
+    return ToolResult(
+        tool="abs_dataset_overview",
+        summary="Summarized available ABS dataset coverage.",
+        data=[counts, {"teams": team_names}],
+        recommended_actions=[
+            "Ask for team, player, challenge usage, miss locations, or non-challenged missed calls for deeper analysis."
+        ],
+    )

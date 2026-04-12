@@ -20,6 +20,21 @@
         </div>
         <h1>Weekly Reports</h1>
         <p class="subtle">Pick a generated markdown report to preview it with full formatting.</p>
+        <div class="row">
+          <div>
+            <label>Team</label>
+            <select id="teamSelect"></select>
+          </div>
+          <div>
+            <label>Week Start</label>
+            <input id="weekStart" type="date" />
+          </div>
+        </div>
+        <div class="row">
+          <button id="generateBtn" onclick="generateReport()">Generate Report</button>
+          <button class="ghost" onclick="loadReports()">Refresh List</button>
+        </div>
+        <div id="genStatus" class="subtle" style="margin-top: 8px"></div>
       </div>
 
       <div class="grid two">
@@ -32,10 +47,64 @@
           <div id="reportBody" class="markdown-body subtle">No report selected yet.</div>
         </div>
       </div>
+      <footer data-site-footer></footer>
     </div>
     <script>
       function renderMarkdown(mdText) {
         return DOMPurify.sanitize(marked.parse(mdText || ""));
+      }
+
+      async function loadTeams() {
+        const res = await fetch("/dashboard/teams");
+        const data = await res.json();
+        const select = document.getElementById("teamSelect");
+        select.innerHTML = "";
+        for (const team of data.teams || []) {
+          const opt = document.createElement("option");
+          opt.value = team;
+          opt.textContent = team;
+          select.appendChild(opt);
+        }
+      }
+
+      function mondayOfCurrentWeek() {
+        const now = new Date();
+        const day = now.getDay();
+        const diff = day === 0 ? -6 : 1 - day;
+        const monday = new Date(now);
+        monday.setDate(now.getDate() + diff);
+        return monday.toISOString().slice(0, 10);
+      }
+
+      async function generateReport() {
+        const team = document.getElementById("teamSelect").value;
+        const weekStart = document.getElementById("weekStart").value;
+        const button = document.getElementById("generateBtn");
+        const status = document.getElementById("genStatus");
+        if (!team || !weekStart) {
+          status.textContent = "Select team and week start first.";
+          return;
+        }
+        button.disabled = true;
+        status.textContent = "Generating report...";
+        try {
+          const res = await fetch("/reports/weekly", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ team_name: team, week_start: weekStart }),
+          });
+          if (!res.ok) {
+            status.textContent = "Report generation failed.";
+            return;
+          }
+          const data = await res.json();
+          status.textContent = `Generated: ${data.report_markdown_path}`;
+          await loadReports();
+        } catch {
+          status.textContent = "Network error while generating report.";
+        } finally {
+          button.disabled = false;
+        }
       }
 
       async function loadReport(name) {
@@ -66,8 +135,9 @@
         loadReport(reports[0].name);
       }
 
-      loadReports();
+      document.getElementById("weekStart").value = mondayOfCurrentWeek();
+      loadTeams().then(loadReports);
     </script>
+    <script src="/static/footer.js"></script>
   </body>
 </html>
-

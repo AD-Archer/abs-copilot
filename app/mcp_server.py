@@ -13,6 +13,7 @@ from app.analytics import (
     player_report,
     position_accuracy,
     run_query,
+    dataset_overview,
     weekly_summary,
 )
 
@@ -96,3 +97,11 @@ def mcp_officiating_quality_proxy(filters: dict[str, Any] | None = None) -> dict
 )
 def mcp_miss_location_analysis(filters: dict[str, Any] | None = None) -> dict[str, Any]:
     return _pack(miss_location_analysis(filters or {}))
+
+
+@mcp.tool(
+    name="abs_dataset_overview",
+    description="Dataset summary including teams, games, players, pitches, and challenges.",
+)
+def mcp_dataset_overview() -> dict[str, Any]:
+    return _pack(dataset_overview())

@@ -95,6 +95,9 @@ def api_mcp_call(req: ToolCallRequest) -> dict[str, Any]:
 
 def _select_tool(question: str) -> tuple[str, dict[str, Any]]:
     q = question.lower()
+    team_name = _find_team_in_question(question)
+    if team_name and "player" not in q:
+        return "abs_challenge_strategy", {"filters": {"team_name": team_name}}
     if "position" in q and ("correct" in q or "incorrect" in q or "accuracy" in q):
         return "abs_position_accuracy", {"filters": {}}
     if "non challenged" in q or "non-challenged" in q:
@@ -105,6 +108,8 @@ def _select_tool(question: str) -> tuple[str, dict[str, Any]]:
         return "abs_officiating_quality_proxy", {"filters": {}}
     if "location" in q or "high or low" in q or "high/low" in q:
         return "abs_miss_location_analysis", {"filters": {}}
+    if "what can you see" in q or "what data" in q or "overview" in q:
+        return "abs_dataset_overview", {}
     if "strategy" in q or "recommend" in q:
         return "abs.challenge_strategy", {"filters": {}}
     if "player" in q:
@@ -116,8 +121,52 @@ def _select_tool(question: str) -> tuple[str, dict[str, Any]]:
     return "abs.run_query", {"question_or_sql": question}
 
 
+def _find_team_in_question(question: str) -> str | None:
+    q = question.lower()
+    conn = get_connection()
+    try:
+        teams = fetch_all_dicts(conn, "SELECT DISTINCT team_name FROM v_team_kpis")
+    finally:
+        conn.close()
+    for row in teams:
+        team_name = row["team_name"]
+        if (team_name or "").lower() in q:
+            return team_name
+    return None
+
+
+def _is_conversational_prompt(question: str) -> bool:
+    q = question.strip().lower()
+    if not q:
+        return True
+    small_talk_tokens = {"hi", "hello", "hey", "thanks", "thank you", "test", "just testing", "this is just a test"}
+    if q in small_talk_tokens:
+        return True
+    words = q.split()
+    if len(words) <= 5 and any(token in q for token in ["test", "hello", "hey", "thanks"]):
+        return True
+    return False
+
+
 @app.post("/chat")
 async def chat(req: ChatRequest) -> dict[str, Any]:
+    if _is_conversational_prompt(req.question):
+        history_payload = [{"role": turn.role, "content": turn.content} for turn in req.history]
+        llm_text = await summarize_with_llm_history(
+            req.question,
+            tool_payload=None,
+            history=history_payload,
+            analytics_mode=False,
+        )
+        answer = llm_text or "I can help with ABS strategy, player tendencies, missed-call analysis, and game-by-game challenge usage."
+        return {
+            "answer": answer,
+            "sources": [],
+            "recommended_actions": [],
+            "supporting_stats": [],
+            "tool_used": "conversation",
+        }
+
     tool_name, args = _select_tool(req.question)
     if req.filters and "filters" in args:
         args["filters"] = {**args.get("filters", {}), **req.filters}
@@ -127,6 +176,11 @@ async def chat(req: ChatRequest) -> dict[str, Any]:
         args["week_start"] = req.filters["week_start"]
 
     result = call_tool(tool_name, args)
+    if result.tool == "abs.player_report" and "No exact player match found." in result.summary:
+        team_name = _find_team_in_question(req.question)
+        if team_name:
+            result = call_tool("abs_challenge_strategy", {"filters": {"team_name": team_name}})
+
     tool_payload = {
         "tool": result.tool,
         "summary": result.summary,
@@ -134,7 +188,7 @@ async def chat(req: ChatRequest) -> dict[str, Any]:
         "recommended_actions": result.recommended_actions,
     }
     history_payload = [{"role": turn.role, "content": turn.content} for turn in req.history]
-    llm_text = await summarize_with_llm_history(req.question, tool_payload, history_payload)
+    llm_text = await summarize_with_llm_history(req.question, tool_payload, history_payload, analytics_mode=True)
     answer = llm_text or (
         f"Answer: {result.summary}\n\nSupporting Stats: {result.data[:3]}\n\nRecommended Actions: {result.recommended_actions}"
     )

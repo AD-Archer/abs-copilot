@@ -36,6 +36,7 @@ def test_mcp_tool_list() -> None:
     assert "abs_challenge_usage" in names
     assert "abs_officiating_quality_proxy" in names
     assert "abs_miss_location_analysis" in names
+    assert "abs_dataset_overview" in names
 
 
 def test_read_only_enforced() -> None:
@@ -55,8 +56,36 @@ def test_chat_uses_tool_path() -> None:
     assert response.status_code == 200
     body = response.json()
     assert "tool_used" in body
-    assert body["tool_used"] in {"abs.run_query", "abs.challenge_strategy", "abs.player_report", "abs.weekly_summary"}
+    assert body["tool_used"] in {
+        "abs.run_query",
+        "abs.challenge_strategy",
+        "abs.player_report",
+        "abs.weekly_summary",
+        "abs_position_accuracy",
+        "abs_non_challenged_incorrect_calls",
+        "abs_challenge_usage",
+        "abs_officiating_quality_proxy",
+        "abs_miss_location_analysis",
+        "abs_dataset_overview",
+    }
     assert "recommended_actions" in body
+
+
+def test_chat_conversational_mode() -> None:
+    response = client.post("/chat", json={"question": "this is just a test", "filters": {}, "history": []})
+    assert response.status_code == 200
+    body = response.json()
+    assert body["tool_used"] == "conversation"
+
+
+def test_chat_team_name_routes_to_team_tool() -> None:
+    response = client.post(
+        "/chat",
+        json={"question": "What is Austin Aces challenge success rate?", "filters": {}, "history": []},
+    )
+    assert response.status_code == 200
+    body = response.json()
+    assert body["tool_used"] in {"abs.challenge_strategy", "abs_challenge_strategy", "abs.run_query"}
 
 
 def test_dashboard_team_contract() -> None:
@@ -87,3 +116,12 @@ def test_weekly_report_generation() -> None:
     assert body["team_name"] == team_name
     assert body["report_markdown_path"].endswith(".md")
     assert body["report_html_path"].endswith(".html")
+    assert "report_sections" in body
+    assert "Executive Summary" in body["report_sections"]
+
+    with open(body["report_markdown_path"], "r", encoding="utf-8") as f:
+        md = f.read()
+    assert "## Executive Summary" in md
+    assert "## Team KPI Snapshot" in md
+    assert "## High-Value Count Opportunities" in md
+    assert "## Next Week Plan" in md

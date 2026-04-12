@@ -11,24 +11,29 @@ def llm_is_configured() -> bool:
     return bool(settings.llm_base_url and settings.llm_api_key and settings.llm_model)
 
 
-async def summarize_with_llm(question: str, tool_payload: dict[str, Any]) -> str | None:
-    return await summarize_with_llm_history(question=question, tool_payload=tool_payload, history=[])
-
-
 async def summarize_with_llm_history(
-    question: str, tool_payload: dict[str, Any], history: list[dict[str, str]]
+    question: str,
+    tool_payload: dict[str, Any] | None,
+    history: list[dict[str, str]],
+    analytics_mode: bool = True,
 ) -> str | None:
     if not llm_is_configured():
         return None
 
+    system_content = (
+        "You are ABS Insight Copilot for baseball analysts/coaches. "
+        "Be concise, natural, and conversational."
+    )
+    if analytics_mode:
+        system_content += (
+            " For analytical prompts, respond in markdown with sections: "
+            "### Answer, ### Supporting Stats, ### Recommended Actions."
+        )
+
     messages: list[dict[str, str]] = [
         {
             "role": "system",
-            "content": (
-                "You are ABS Insight Copilot. Respond in markdown with sections: "
-                "### Answer, ### Supporting Stats, ### Recommended Actions. "
-                "Be concise and practical for coaches."
-            ),
+            "content": system_content,
         }
     ]
     for turn in history[-10:]:
@@ -36,12 +41,15 @@ async def summarize_with_llm_history(
         content = turn.get("content", "")
         if role in {"user", "assistant"} and content:
             messages.append({"role": role, "content": content})
-    messages.append(
-        {
-            "role": "user",
-            "content": f"Question: {question}\n\nTool output:\n{tool_payload}",
-        }
-    )
+    if tool_payload is not None:
+        messages.append(
+            {
+                "role": "user",
+                "content": f"Question: {question}\n\nTool output:\n{tool_payload}",
+            }
+        )
+    else:
+        messages.append({"role": "user", "content": question})
 
     payload = {
         "model": settings.llm_model,

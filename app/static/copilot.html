@@ -34,15 +34,17 @@
         </div>
         <textarea id="q" rows="4" placeholder="Example: What should our catcher challenge in 2-strike counts?"></textarea>
         <div class="row">
-          <button onclick="ask()">Ask Copilot</button>
-          <button class="ghost" onclick="openAgentModal()">Add To Agent</button>
+          <button id="askBtn" onclick="ask()">Ask Copilot</button>
+          <button id="agentBtn" class="ghost" onclick="openAgentModal()">Add To Agent</button>
         </div>
+        <div id="status" class="subtle" style="margin-top: 8px"></div>
       </div>
 
       <div class="panel">
         <h3>Conversation</h3>
         <div id="log" class="chat-log"></div>
       </div>
+      <footer data-site-footer></footer>
     </div>
 
     <div id="agentModal" class="modal-backdrop" style="display: none" onclick="closeAgentModal(event)">
@@ -117,6 +119,16 @@
         }
         log.appendChild(box);
         log.scrollTop = log.scrollHeight;
+        return box;
+      }
+
+      function setLoading(isLoading) {
+        const askBtn = document.getElementById("askBtn");
+        const agentBtn = document.getElementById("agentBtn");
+        const status = document.getElementById("status");
+        askBtn.disabled = isLoading;
+        agentBtn.disabled = isLoading;
+        status.textContent = isLoading ? "Copilot is analyzing your request..." : "";
       }
 
       async function ask() {
@@ -131,15 +143,29 @@
         appendMessage("user", "You", question);
         history.push({ role: "user", content: question });
         document.getElementById("q").value = "";
+        setLoading(true);
+        const loadingBubble = appendMessage(
+          "bot",
+          "ABS Copilot",
+          `<span class="typing">Thinking <span class="dot"></span><span class="dot"></span><span class="dot"></span></span>`
+        );
 
-        const res = await fetch("/chat", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ question, filters, history }),
-        });
-        const data = await res.json();
-        appendMessage("bot", "ABS Copilot", data.answer, data.recommended_actions || []);
-        history.push({ role: "assistant", content: data.answer || "" });
+        try {
+          const res = await fetch("/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ question, filters, history }),
+          });
+          const data = await res.json();
+          loadingBubble.remove();
+          appendMessage("bot", "ABS Copilot", data.answer, data.recommended_actions || []);
+          history.push({ role: "assistant", content: data.answer || "" });
+        } catch (error) {
+          loadingBubble.remove();
+          appendMessage("bot", "ABS Copilot", "I hit a network error while processing that request. Please try again.");
+        } finally {
+          setLoading(false);
+        }
       }
 
       function buildAgentGuide(baseUrl) {
@@ -212,5 +238,6 @@ curl -s ${baseUrl}/api/mcp/call \\
 
       loadTeams();
     </script>
+    <script src="/static/footer.js"></script>
   </body>
 </html>
