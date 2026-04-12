@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Team Overview</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="panel">
+        <div class="topbar">
+          <a class="chip" href="/">Home</a>
+          <a class="chip" href="/team">Team Overview</a>
+          <a class="chip" href="/player">Player Lens</a>
+          <a class="chip" href="/copilot">Ask Copilot</a>
+          <a class="chip" href="/reports-view">Reports</a>
+        </div>
+        <h1>Team Overview</h1>
+        <p class="subtle">Select a team to quickly inspect overturn performance and top challenge counts.</p>
+        <select id="team"></select>
+        <button onclick="loadTeam()">Load Team KPI</button>
+      </div>
+
+      <div class="panel" id="teamPanel" style="display: none">
+        <h2 id="teamTitle">Team</h2>
+        <div class="kpi-grid" id="kpis"></div>
+        <h3>High-Value Counts</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Count</th>
+              <th>Attempts</th>
+              <th>Overturn %</th>
+            </tr>
+          </thead>
+          <tbody id="countsBody"></tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h3>Need a recommendation?</h3>
+        <p class="subtle">Jump to chat and ask: "What challenge strategy should this team use in leverage counts?"</p>
+        <a class="chip" href="/copilot">Ask ABS Copilot</a>
+      </div>
+    </div>
+    <script>
+      async function loadTeams() {
+        const res = await fetch("/dashboard/teams");
+        const data = await res.json();
+        const select = document.getElementById("team");
+        select.innerHTML = "";
+        for (const team of data.teams || []) {
+          const opt = document.createElement("option");
+          opt.value = team;
+          opt.textContent = team;
+          select.appendChild(opt);
+        }
+      }
+
+      function kpi(label, value) {
+        return `<div class="kpi"><div class="label">${label}</div><div class="value">${value ?? "-"}</div></div>`;
+      }
+
+      async function loadTeam() {
+        const team = document.getElementById("team").value;
+        const res = await fetch(`/dashboard/team/${encodeURIComponent(team)}`);
+        if (!res.ok) {
+          alert("Team not found");
+          return;
+        }
+        const data = await res.json();
+        document.getElementById("teamPanel").style.display = "block";
+        document.getElementById("teamTitle").textContent = `${data.team} Overview`;
+
+        const k = data.kpis;
+        const kpis = document.getElementById("kpis");
+        kpis.innerHTML = [
+          kpi("Total Challenges", k.total_challenges),
+          kpi("Overturned", k.overturned_challenges),
+          kpi("Confirmed", k.confirmed_challenges),
+          kpi("Overturn Rate %", k.overturn_rate_pct),
+          kpi("Batter Challenges", k.batter_challenges),
+          kpi("Pitcher Challenges", k.pitcher_challenges),
+          kpi("Catcher Challenges", k.catcher_challenges),
+          kpi("Leverage Count Challenges", k.leverage_count_challenges),
+        ].join("");
+
+        const body = document.getElementById("countsBody");
+        body.innerHTML = "";
+        for (const row of data.high_value_counts || []) {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `<td>${row.balls}-${row.strikes}</td><td>${row.attempts}</td><td>${row.overturn_rate_pct}</td>`;
+          body.appendChild(tr);
+        }
+      }
+
+      loadTeams().then(loadTeam);
+    </script>
+  </body>
+</html>

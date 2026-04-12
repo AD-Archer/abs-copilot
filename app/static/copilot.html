@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ask ABS Copilot</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="panel">
+        <div class="topbar">
+          <a class="chip" href="/">Home</a>
+          <a class="chip" href="/team">Team Overview</a>
+          <a class="chip" href="/player">Player Lens</a>
+          <a class="chip" href="/copilot">Ask Copilot</a>
+          <a class="chip" href="/reports-view">Reports</a>
+        </div>
+        <h1>Ask ABS Copilot</h1>
+        <p class="subtle">Use text or voice. Copilot responds with answer, supporting stats, and recommended actions.</p>
+        <div class="row">
+          <div>
+            <label>Team Filter (optional)</label>
+            <select id="teamFilter">
+              <option value="">All Teams</option>
+            </select>
+          </div>
+          <div>
+            <label>Week Start (optional)</label>
+            <input id="weekStart" type="date" />
+          </div>
+        </div>
+        <textarea id="q" rows="4" placeholder="Example: What should our catcher challenge in 2-strike counts?"></textarea>
+        <div class="row">
+          <button onclick="ask()">Ask Copilot</button>
+          <button class="ghost" onclick="openAgentModal()">Add To Agent</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Conversation</h3>
+        <div id="log" class="chat-log"></div>
+      </div>
+    </div>
+
+    <div id="agentModal" class="modal-backdrop" style="display: none" onclick="closeAgentModal(event)">
+      <div class="modal-card">
+        <h3>Add ABS Copilot To Your Agent</h3>
+        <p class="subtle">Use this exact MCP URL in your agent's tool integration setup.</p>
+        <div class="kpi">
+          <div class="label">MCP URL (SSE)</div>
+          <div class="value" style="font-size: 16px" id="agentMcpUrl"></div>
+        </div>
+        <div class="subtle" style="margin-top: 6px">
+          Base URL: <span id="agentBaseUrl"></span>
+        </div>
+        <div class="markdown-body" style="margin-top: 10px">
+          <h3>1. Configure Tool Endpoints</h3>
+          <pre><code id="agentConfig"></code></pre>
+          <h3>2. Test Connectivity</h3>
+          <pre><code id="agentTest"></code></pre>
+          <h3>3. Debug Workflow</h3>
+          <pre><code id="agentDebug"></code></pre>
+        </div>
+        <div class="row">
+          <button onclick="copyAgentGuide()">Copy Setup Guide</button>
+          <button class="ghost" onclick="forceCloseAgentModal()">Close</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const history = [];
+
+      async function loadTeams() {
+        const res = await fetch("/dashboard/teams");
+        const data = await res.json();
+        const teamFilter = document.getElementById("teamFilter");
+        for (const team of data.teams || []) {
+          const opt = document.createElement("option");
+          opt.value = team;
+          opt.textContent = team;
+          teamFilter.appendChild(opt);
+        }
+      }
+
+      function renderMarkdown(mdText) {
+        const raw = marked.parse(mdText || "");
+        return DOMPurify.sanitize(raw);
+      }
+
+      function nowTime() {
+        return new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+      }
+
+      function appendMessage(kind, title, body, actions = []) {
+        const log = document.getElementById("log");
+        const box = document.createElement("div");
+        box.className = `msg ${kind}`;
+        box.innerHTML = `
+          <div class="msg-head">
+            <strong>${title}</strong>
+            <span class="subtle">${nowTime()}</span>
+          </div>
+          <div class="markdown-body">${kind === "bot" ? renderMarkdown(body) : body}</div>
+        `;
+        if (actions.length) {
+          const actionWrap = document.createElement("div");
+          for (const item of actions) {
+            const span = document.createElement("span");
+            span.className = "pill";
+            span.textContent = item;
+            actionWrap.appendChild(span);
+          }
+          box.appendChild(actionWrap);
+        }
+        log.appendChild(box);
+        log.scrollTop = log.scrollHeight;
+      }
+
+      async function ask() {
+        const question = document.getElementById("q").value;
+        if (!question.trim()) return;
+        const team_name = document.getElementById("teamFilter").value;
+        const week_start = document.getElementById("weekStart").value;
+        const filters = {};
+        if (team_name) filters.team_name = team_name;
+        if (week_start) filters.week_start = week_start;
+
+        appendMessage("user", "You", question);
+        history.push({ role: "user", content: question });
+        document.getElementById("q").value = "";
+
+        const res = await fetch("/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question, filters, history }),
+        });
+        const data = await res.json();
+        appendMessage("bot", "ABS Copilot", data.answer, data.recommended_actions || []);
+        history.push({ role: "assistant", content: data.answer || "" });
+      }
+
+      function buildAgentGuide(baseUrl) {
+        const mcpUrl = `${baseUrl}/mcp/sse`;
+        const config = `{
+  "name": "abs-insight-copilot",
+  "transport": "sse",
+  "url": "${mcpUrl}"
+}`;
+        const test = `curl -s ${baseUrl}/health
+curl -s ${baseUrl}/api/mcp/tools
+curl -s ${baseUrl}/api/mcp/call \\
+  -X POST \\
+  -H 'content-type: application/json' \\
+  -d '{"tool":"abs.run_query","arguments":{"question_or_sql":"SELECT * FROM v_team_kpis LIMIT 3"}}'`;
+        const debug = `1) Verify server is running on the shown URL and port.
+2) Add MCP URL ${mcpUrl} to your AI client MCP settings.
+3) Confirm your agent can reach ${baseUrl} (local agents may require localhost/127.0.0.1 access).
+4) SSE transport uses message endpoint ${baseUrl}/mcp/messages.
+5) If tool calls fail, inspect API response body for validation or SQL safety errors.
+6) Use /api/mcp/tools to verify tool names:
+   abs_run_query, abs_challenge_strategy, abs_player_report, abs_weekly_summary,
+   abs_position_accuracy, abs_non_challenged_incorrect_calls, abs_challenge_usage,
+   abs_officiating_quality_proxy, abs_miss_location_analysis
+7) Use /chat for end-to-end chat path testing with tool usage.`;
+        return { config, test, debug };
+      }
+
+      function openAgentModal() {
+        const baseUrl = window.location.origin;
+        const mcpUrl = `${baseUrl}/mcp/sse`;
+        const { config, test, debug } = buildAgentGuide(baseUrl);
+        document.getElementById("agentBaseUrl").textContent = baseUrl;
+        document.getElementById("agentMcpUrl").textContent = mcpUrl;
+        document.getElementById("agentConfig").textContent = config;
+        document.getElementById("agentTest").textContent = test;
+        document.getElementById("agentDebug").textContent = debug;
+        document.getElementById("agentModal").style.display = "flex";
+      }
+
+      function forceCloseAgentModal() {
+        document.getElementById("agentModal").style.display = "none";
+      }
+
+      function closeAgentModal(event) {
+        if (event.target.id === "agentModal") {
+          forceCloseAgentModal();
+        }
+      }
+
+      async function copyAgentGuide() {
+        const baseUrl = document.getElementById("agentBaseUrl").textContent || window.location.origin;
+        const mcpUrl = `${baseUrl}/mcp/sse`;
+        const { config, test, debug } = buildAgentGuide(baseUrl);
+        const text = `ABS Copilot Agent Setup\n\nMCP URL (SSE): ${mcpUrl}\nBase URL: ${baseUrl}\n\nConfig\n${config}\n\nTest\n${test}\n\nDebug\n${debug}`;
+        try {
+          await navigator.clipboard.writeText(text);
+          alert("Agent setup guide copied.");
+        } catch {
+          alert("Clipboard copy failed. You can still copy from the popup.");
+        }
+      }
+
+      document.getElementById("q").addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && !event.shiftKey) {
+          event.preventDefault();
+          ask();
+        }
+      });
+
+      loadTeams();
+    </script>
+  </body>
+</html>

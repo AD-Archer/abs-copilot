@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ABS Reports</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="panel">
+        <div class="topbar">
+          <a class="chip" href="/">Home</a>
+          <a class="chip" href="/team">Team Overview</a>
+          <a class="chip" href="/player">Player Lens</a>
+          <a class="chip" href="/copilot">Ask Copilot</a>
+          <a class="chip" href="/reports-view">Reports</a>
+        </div>
+        <h1>Weekly Reports</h1>
+        <p class="subtle">Pick a generated markdown report to preview it with full formatting.</p>
+      </div>
+
+      <div class="grid two">
+        <div class="panel">
+          <h3>Available Files</h3>
+          <div id="reportList" class="list"></div>
+        </div>
+        <div class="panel">
+          <h3 id="reportTitle">Preview</h3>
+          <div id="reportBody" class="markdown-body subtle">No report selected yet.</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function renderMarkdown(mdText) {
+        return DOMPurify.sanitize(marked.parse(mdText || ""));
+      }
+
+      async function loadReport(name) {
+        const res = await fetch(`/reports/content/${encodeURIComponent(name)}`);
+        if (!res.ok) return;
+        const data = await res.json();
+        document.getElementById("reportTitle").textContent = data.name;
+        document.getElementById("reportBody").classList.remove("subtle");
+        document.getElementById("reportBody").innerHTML = renderMarkdown(data.markdown);
+      }
+
+      async function loadReports() {
+        const res = await fetch("/reports/list");
+        const data = await res.json();
+        const container = document.getElementById("reportList");
+        container.innerHTML = "";
+        const reports = data.reports || [];
+        if (!reports.length) {
+          container.innerHTML = '<div class="subtle" style="padding: 10px;">No markdown reports yet. Generate one from API or chat workflows.</div>';
+          return;
+        }
+        for (const report of reports) {
+          const btn = document.createElement("button");
+          btn.textContent = report.name;
+          btn.onclick = () => loadReport(report.name);
+          container.appendChild(btn);
+        }
+        loadReport(reports[0].name);
+      }
+
+      loadReports();
+    </script>
+  </body>
+</html>
+

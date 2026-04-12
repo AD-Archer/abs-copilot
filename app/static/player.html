@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Player Lens</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="panel">
+        <div class="topbar">
+          <a class="chip" href="/">Home</a>
+          <a class="chip" href="/team">Team Overview</a>
+          <a class="chip" href="/player">Player Lens</a>
+          <a class="chip" href="/copilot">Ask Copilot</a>
+          <a class="chip" href="/reports-view">Reports</a>
+        </div>
+        <h1>Player Lens</h1>
+        <p class="subtle">Search by player name, then select to see tendencies and coaching notes.</p>
+        <input id="playerQuery" placeholder="Type player name..." oninput="searchPlayers()" />
+        <select id="playerSelect"></select>
+        <button onclick="loadPlayer()">Load Player KPI</button>
+      </div>
+
+      <div class="panel" id="playerPanel" style="display: none">
+        <h2 id="playerTitle">Player</h2>
+        <div class="kpi-grid" id="playerKpis"></div>
+        <h3>Coaching Notes</h3>
+        <div id="notes"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Ask Follow-ups</h3>
+        <p class="subtle">Send player context to copilot for a game-prep recommendation.</p>
+        <a class="chip" href="/copilot">Open Copilot</a>
+      </div>
+    </div>
+    <script>
+      let players = [];
+
+      async function searchPlayers() {
+        const q = document.getElementById("playerQuery").value;
+        const res = await fetch(`/dashboard/players?q=${encodeURIComponent(q)}&limit=100`);
+        const data = await res.json();
+        players = data.players || [];
+        const select = document.getElementById("playerSelect");
+        select.innerHTML = "";
+        for (const p of players) {
+          const opt = document.createElement("option");
+          opt.value = p.player_id;
+          opt.textContent = `${p.player_name} (${p.team_name}) - ${p.player_id}`;
+          select.appendChild(opt);
+        }
+      }
+
+      function kpi(label, value) {
+        return `<div class="kpi"><div class="label">${label}</div><div class="value">${value ?? "-"}</div></div>`;
+      }
+
+      async function loadPlayer() {
+        const player = document.getElementById("playerSelect").value;
+        const res = await fetch(`/dashboard/player/${encodeURIComponent(player)}`);
+        if (!res.ok) {
+          alert("Player not found");
+          return;
+        }
+        const data = await res.json();
+        const base = data.payload[0] || {};
+        document.getElementById("playerPanel").style.display = "block";
+        document.getElementById("playerTitle").textContent = `${base.player_name || data.player_id} Lens`;
+        document.getElementById("playerKpis").innerHTML = [
+          kpi("Total Challenges", base.total_challenges_made),
+          kpi("Overturned", base.overturned_when_challenged),
+          kpi("Success %", base.personal_overturn_rate_pct),
+          kpi("Seen As Batter", base.seen_as_batter),
+          kpi("Seen As Pitcher", base.seen_as_pitcher),
+          kpi("Seen As Catcher", base.seen_as_catcher),
+        ].join("");
+
+        const notes = document.getElementById("notes");
+        notes.innerHTML = "";
+        for (const note of data.coaching_notes || []) {
+          const span = document.createElement("span");
+          span.className = "pill";
+          span.textContent = note;
+          notes.appendChild(span);
+        }
+      }
+
+      searchPlayers();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,283 @@
+:root {
+  --bg: #eef3f8;
+  --panel: #ffffff;
+  --ink: #10233d;
+  --muted: #58708b;
+  --accent: #0f8f7f;
+  --accent-2: #0a5f9c;
+  --line: #d7e1eb;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: radial-gradient(circle at top right, #d9ecff, var(--bg) 55%);
+}
+
+.wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 10px 25px rgba(16, 35, 61, 0.08);
+  margin-bottom: 16px;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+.topbar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.chip {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #e8f1fb;
+  color: var(--accent-2);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  gap: 12px;
+}
+
+.grid.two {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+h1 {
+  margin-top: 0;
+}
+
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #c7d3e0;
+  background: white;
+}
+
+button {
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  border: none;
+}
+
+pre {
+  white-space: pre-wrap;
+  color: var(--muted);
+}
+
+.links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.subtle {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.kpi {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.kpi .label {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.kpi .value {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  padding: 8px 6px;
+  font-size: 14px;
+}
+
+.chat-log {
+  min-height: 260px;
+  max-height: 52vh;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px;
+  background: #fbfdff;
+}
+
+.msg {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.msg.user {
+  background: #e6f5f2;
+}
+
+.msg.bot {
+  background: #edf2fb;
+}
+
+.msg-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.markdown-body {
+  line-height: 1.5;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3 {
+  margin: 0.6em 0 0.3em;
+}
+
+.markdown-body p {
+  margin: 0.4em 0;
+}
+
+.markdown-body ul {
+  padding-left: 18px;
+  margin: 0.4em 0;
+}
+
+.markdown-body code {
+  background: #f3f6fb;
+  padding: 2px 5px;
+  border-radius: 6px;
+}
+
+.markdown-body pre {
+  background: #f3f6fb;
+  color: var(--ink);
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.list {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.list button {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  text-align: left;
+  background: white;
+  color: var(--ink);
+}
+
+.list button:hover {
+  background: #f4f9ff;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row > * {
+  flex: 1;
+}
+
+.ghost {
+  background: white;
+  color: var(--accent-2);
+  border: 1px solid var(--accent-2);
+}
+
+.pill {
+  display: inline-block;
+  margin-right: 8px;
+  margin-top: 8px;
+  background: #edf8f6;
+  color: #0c6f63;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(16, 35, 61, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1000;
+}
+
+.modal-card {
+  width: min(900px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 20px 50px rgba(16, 35, 61, 0.25);
+}
+
+@media (max-width: 640px) {
+  .row {
+    flex-direction: column;
+  }
+}
