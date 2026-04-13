@@ -3,6 +3,7 @@
 MCP-first analytics assistant for ABS challenge coaching workflows.
 
 ## What This Includes
+
 - Single backend service: `Python + FastAPI + SQLite`
 - Canonical analytics views:
   - `v_challenges_enriched`
@@ -22,11 +23,24 @@ MCP-first analytics assistant for ABS challenge coaching workflows.
   - Includes executive summary, KPI snapshot, tactical opportunity tables, risk flags, and next-week action plan
 
 ## Data Scope
+
 - `abs_challenges.csv`: one row per ABS challenge
 - `pitches.csv`: all called pitches from ABS-enabled games
 - `players.csv`: player lookup table
 
+## Example Copilot Questions
+
+Here are a few examples of what a coach, analyst, or player might ask the ABS Insight Copilot:
+
+- _"Which of our catchers has the lowest challenge success rate on low pitches?"_
+- _"Generate a player report for [Player Name] focusing on their challenge tendencies."_
+- _"How many obviously incorrect strike calls did the team fail to challenge last week?"_
+- _"Show me the challenge success rate for the Austin Aces by inning."_
+- _"Are there specific umpires who are missing calls frequently against our hitters?"_
+- _"Summarize the Des Moines Dragons' ABS challenge performance and give actionable advice for next week."_
+
 ## Quick Start (Local)
+
 ```bash
 uv venv .venv
 source .venv/bin/activate
@@ -35,6 +49,7 @@ uvicorn app.main:app --reload
 ```
 
 Open:
+
 - `http://localhost:8000/` (home)
 - `http://localhost:8000/team`
 - `http://localhost:8000/player`
@@ -42,6 +57,7 @@ Open:
 - `http://localhost:8000/reports-view`
 
 ## Quick Start (Docker)
+
 ```bash
 docker build -t abs-copilot .
 docker run --rm -p 8000:8000 --env-file .env -v "$(pwd)/reports:/app/reports" abs-copilot
@@ -50,6 +66,7 @@ docker run --rm -p 8000:8000 --env-file .env -v "$(pwd)/reports:/app/reports" ab
 If no `.env` is present, copy `.env.example` and fill values as needed. LLM vars are optional.
 
 ## Environment Variables
+
 - `APP_DB_PATH` (default: `/data/abs_insights.db` in container)
 - `RESULT_ROW_LIMIT` (default: `200`)
 - `REPORTS_DIR` (default: `/app/reports` in container)
@@ -58,6 +75,7 @@ If no `.env` is present, copy `.env.example` and fill values as needed. LLM vars
 - `LLM_MODEL` (default: `gemini-3.1-flash-lite-preview`)
 
 ## Public HTTP Interfaces
+
 - `POST /chat` → answer + sources + supporting stats + recommended actions
 - `GET /dashboard/team/{team}`
 - `GET /dashboard/player/{player_id}`
@@ -71,15 +89,18 @@ If no `.env` is present, copy `.env.example` and fill values as needed. LLM vars
 - `GET /reports/content/{report_name}`
 
 ### MCP Server (Default)
+
 - SSE MCP endpoint: `http://localhost:8000/mcp/sse`
 - MCP message endpoint: `http://localhost:8000/mcp/messages`
 - Compatibility aliases: `/sse` and `/messages` (for clients that start from base URL and legacy fallback)
 
 ### Helper Endpoints (for debugging)
+
 - `GET /api/mcp/tools`
 - `POST /api/mcp/call`
 
 ### Core MCP Tool Names
+
 - `abs_run_query`
 - `abs_challenge_strategy`
 - `abs_player_report`
@@ -91,6 +112,7 @@ If no `.env` is present, copy `.env.example` and fill values as needed. LLM vars
 - `abs_miss_location_analysis`
 
 Example:
+
 ```bash
 curl -s localhost:8000/api/mcp/call \
   -X POST \
@@ -102,11 +124,13 @@ curl -s localhost:8000/api/mcp/call \
 ```
 
 ## Testing
+
 ```bash
 uv run pytest
 ```
 
 ## Notes
+
 - Analytics access is read-only by policy (`SELECT`/`WITH` only; write keywords blocked).
 - Result sets are bounded by `RESULT_ROW_LIMIT`.
 - Weekly report generation is endpoint-triggered (`POST /reports/weekly`) and can be scheduled by an external cron/invoker.
